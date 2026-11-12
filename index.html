@@ -1,0 +1,1196 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <!-- Metadatos SEO principales -->
+  <title>LH Valor | Gestión de Renta Variable &amp; Ingeniería de Software a Medida</title>
+  <meta
+    name="description"
+    content="LH Valor combina la preservación y crecimiento patrimonial en Renta Variable (11% CAGR desde 2021) con servicios digitales y desarrollo web de alto impacto para empresas."
+  />
+  <meta
+    name="keywords"
+    content="LH Valor, fondo de inversión, renta variable, value investing, desarrollo web, software a medida, servicios digitales, rentabilidad compuesta, Héctor Paredes"
+  />
+  <meta name="author" content="LH Valor - Héctor Paredes Reche" />
+  <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#070A08" />
+
+  <!-- Etiquetas Open Graph para compartición en redes y mensajería -->
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="es_ES" />
+  <meta property="og:site_name" content="LH Valor" />
+  <meta property="og:title" content="LH Valor | Inversión en Renta Variable &amp; Soluciones Digitales" />
+  <meta
+    property="og:description"
+    content="Preservación y crecimiento patrimonial a largo plazo (11% anual compuesto desde 2021) junto con ingeniería de software moderna para impulsar negocios."
+  />
+
+  <!-- Twitter / X Cards -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@HParedesR" />
+  <meta name="twitter:creator" content="@HParedesR" />
+  <meta name="twitter:title" content="LH Valor | Renta Variable &amp; Desarrollo Tecnológico" />
+  <meta
+    name="twitter:description"
+    content="Rigor analítico en gestión patrimonial (11% CAGR desde 2021) y desarrollo web de alta conversión para empresas."
+  />
+
+  <!-- Favicon SVG embebido de carga instantánea -->
+  <link
+    rel="icon"
+    type="image/svg+xml"
+    href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%2316A34A'/%3E%3Cstop offset='50%25' stop-color='%2322C55E'/%3E%3Cstop offset='100%25' stop-color='%234ADE80'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='12' fill='%23000000'/%3E%3Crect x='2' y='2' width='60' height='60' rx='10' fill='none' stroke='url(%23g)' stroke-width='2.5'/%3E%3Cpath d='M16 18v28h14v-5H22V18h-6zm20 0v28h6V34h8v12h6V18h-6v11h-8V18h-6z' fill='%2322C55E'/%3E%3C/svg%3E"
+  />
+
+  <!-- Tipografías Google Fonts: Plus Jakarta Sans, Inter y JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- Hoja de estilos principal (ruta relativa para Cloudflare Pages) -->
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <!-- Enlace de salto para accesibilidad mediante teclado -->
+  <a href="#contenido-principal" class="skip-link">Saltar al contenido principal</a>
+
+  <!-- Efectos de iluminación ambiental en segundo plano -->
+  <div class="ambient-glow ambient-glow--finance" aria-hidden="true"></div>
+  <div class="ambient-glow ambient-glow--tech" aria-hidden="true"></div>
+  <div class="bg-grid-pattern" aria-hidden="true"></div>
+
+  <!-- =====================================================================
+       1. NAVEGACIÓN PRINCIPAL (HEADER / NAVBAR)
+       ===================================================================== -->
+  <header class="site-header" id="header">
+    <div class="container navbar">
+      <!-- Logotipo textual estilizado LH Valor -->
+      <a href="#inicio" class="brand-logo" aria-label="LH Valor - Ir al inicio">
+        <span class="brand-logo__mark" aria-hidden="true">
+          <svg width="28" height="28" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="1.5" y="1.5" width="29" height="29" rx="6" fill="#000000" stroke="url(#logoGrad)" stroke-width="2" />
+            <path d="M8 9.5V22.5H14.5V20H10.8V9.5H8Z" fill="#22C55E" />
+            <path d="M16.5 9.5V22.5H19.3V17.1H23.2V22.5H26V9.5H23.2V14.6H19.3V9.5H16.5Z" fill="url(#logoGrad)" />
+            <defs>
+              <linearGradient id="logoGrad" x1="0" y1="0" x2="32" y2="32" gradientUnits="userSpaceOnUse">
+                <stop offset="0%" stop-color="#16A34A" />
+                <stop offset="50%" stop-color="#22C55E" />
+                <stop offset="100%" stop-color="#4ADE80" />
+              </linearGradient>
+            </defs>
+          </svg>
+        </span>
+        <span class="brand-logo__text">
+          <span class="brand-logo__lh">LH</span>
+          <span class="brand-logo__valor">VALOR</span>
+        </span>
+        <span class="brand-logo__tag">Capital &amp; Tech</span>
+      </a>
+
+      <!-- Enlaces de navegación principal -->
+      <nav class="nav-menu" id="nav-menu" aria-label="Navegación principal">
+        <ul class="nav-list">
+          <li><a href="#inicio" class="nav-link active" data-nav-section="inicio">Inicio</a></li>
+          <li><a href="#renta-variable" class="nav-link" data-nav-section="renta-variable">Renta Variable</a></li>
+          <li><a href="#servicios-digitales" class="nav-link" data-nav-section="servicios-digitales">Servicios Digitales</a></li>
+          <li><a href="#filosofia" class="nav-link" data-nav-section="filosofia">Filosofía</a></li>
+          <li><a href="#contacto" class="nav-link" data-nav-section="contacto">Contacto</a></li>
+        </ul>
+
+        <!-- Acciones móviles integradas en el menú desplegable -->
+        <div class="nav-mobile-actions">
+          <a
+            href="https://x.com/HParedesR"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="social-x-btn social-x-btn--mobile"
+            aria-label="Seguir a Héctor Paredes en X (@HParedesR)"
+          >
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+            </svg>
+            <span>@HParedesR en X</span>
+          </a>
+          <a href="#contacto" class="btn btn--primary btn--full">Contactar</a>
+        </div>
+      </nav>
+
+      <!-- Acciones derechas en escritorio: Enlace a X + CTA Contactar + Botón Menú Móvil -->
+      <div class="navbar-actions">
+        <a
+          href="https://x.com/HParedesR"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="social-x-btn"
+          aria-label="Visitar perfil oficial en X (@HParedesR)"
+          title="Perfil oficial en X (@HParedesR)"
+        >
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+          </svg>
+          <span class="social-x-btn__handle">@HParedesR</span>
+        </a>
+
+        <a href="#contacto" class="btn btn--primary btn--nav">
+          <span>Contactar</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M5 12h14" />
+            <path d="m12 5 7 7-7 7" />
+          </svg>
+        </a>
+
+        <button
+          type="button"
+          class="menu-toggle"
+          id="menu-toggle"
+          aria-expanded="false"
+          aria-controls="nav-menu"
+          aria-label="Abrir menú de navegación"
+        >
+          <span class="menu-toggle__bar"></span>
+          <span class="menu-toggle__bar"></span>
+          <span class="menu-toggle__bar"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="contenido-principal">
+    <!-- =====================================================================
+         2. HERO SECTION (PROPUESTA DE VALOR PRINCIPAL)
+         ===================================================================== -->
+    <section class="hero-section" id="inicio" aria-labelledby="hero-title">
+      <div class="container hero-grid">
+        <!-- Columna izquierda: Mensaje central, insignias y doble CTA -->
+        <div class="hero-content">
+          <!-- Insignias visuales destacadas -->
+          <div class="hero-badges" role="list" aria-label="Hitos y especialidades de LH Valor">
+            <a href="#renta-variable" class="badge badge--finance" role="listitem">
+              <span class="badge__dot badge__dot--finance" aria-hidden="true"></span>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <polyline points="22 7 13.5 15.5 8.5 10.5 2 17" />
+                <polyline points="16 7 22 7 22 13" />
+              </svg>
+              <span>11% de rentabilidad anual compuesta desde 2021</span>
+            </a>
+
+            <a href="#servicios-digitales" class="badge badge--tech" role="listitem">
+              <span class="badge__dot badge__dot--tech" aria-hidden="true"></span>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <polyline points="16 18 22 12 16 6" />
+                <polyline points="8 6 2 12 8 18" />
+              </svg>
+              <span>Software y presencia digital a medida</span>
+            </a>
+          </div>
+
+          <h1 class="hero-title" id="hero-title">
+            Preservación y crecimiento <span class="text-gradient--finance">patrimonial a largo plazo</span> junto con <span class="text-gradient--tech">ingeniería de software moderna</span> para escalar negocios.
+          </h1>
+
+          <p class="hero-subtitle">
+            En <strong>LH Valor</strong> unimos dos disciplinas basadas en el rigor analítico y la ejecución excelente: la gestión disciplinada en <strong>Renta Variable</strong> bajo filosofía <em>Value Investing</em> y el desarrollo de <strong>soluciones web y software a medida</strong> que aportan valor tangible, medible y duradero a nuestros partícipes y clientes.
+          </p>
+
+          <!-- Doble CTA -->
+          <div class="hero-cta-group">
+            <a href="#renta-variable" class="btn btn--finance btn--lg" data-focus-pillar="finance">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <line x1="12" y1="20" x2="12" y2="10" />
+                <line x1="18" y1="20" x2="18" y2="4" />
+                <line x1="6" y1="20" x2="6" y2="16" />
+              </svg>
+              <span>Conocer el Fondo de Inversión</span>
+            </a>
+
+            <a href="#servicios-digitales" class="btn btn--tech btn--lg" data-focus-pillar="tech">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="2" y="3" width="20" height="14" rx="2" ry="2" />
+                <line x1="8" y1="21" x2="16" y2="21" />
+                <line x1="12" y1="17" x2="12" y2="21" />
+              </svg>
+              <span>Explorar Servicios Digitales</span>
+            </a>
+          </div>
+
+          <!-- Resumen rápido de confianza -->
+          <div class="hero-trust-strip">
+            <div class="trust-metric">
+              <span class="trust-metric__value trust-metric__value--finance">+11% CAGR</span>
+              <span class="trust-metric__label">Rentabilidad anualizada desde 2021</span>
+            </div>
+            <div class="trust-divider" aria-hidden="true"></div>
+            <div class="trust-metric">
+              <span class="trust-metric__value trust-metric__value--tech">100% A Medida</span>
+              <span class="trust-metric__label">Arquitectura web de alta conversión</span>
+            </div>
+            <div class="trust-divider" aria-hidden="true"></div>
+            <div class="trust-metric">
+              <span class="trust-metric__value">Alineación Total</span>
+              <span class="trust-metric__label">Trato directo y visión a largo plazo</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Columna derecha: Panel ejecutivo interactivo de doble arquitectura -->
+        <div class="hero-visual" aria-label="Panel ejecutivo de rendimiento y tecnología de LH Valor">
+          <div class="executive-card">
+            <div class="executive-card__header">
+              <div class="executive-card__brand">
+                <span class="status-indicator" aria-hidden="true"></span>
+                <span class="executive-card__title">LH VALOR // ECOSISTEMA DUAL</span>
+              </div>
+              <span class="executive-card__tag">EST. 2021</span>
+            </div>
+
+            <!-- Bloque visual 1: Rendimiento Renta Variable -->
+            <div class="exec-module exec-module--finance">
+              <div class="exec-module__top">
+                <div>
+                  <span class="exec-module__kicker">PATA I · GESTIÓN DE CAPITAL</span>
+                  <h2 class="exec-module__heading">Fondo de Renta Variable</h2>
+                </div>
+                <div class="exec-module__badge-cagr">
+                  <span class="cagr-number">11%</span>
+                  <span class="cagr-caption">CAGR (2021–Actualidad)</span>
+                </div>
+              </div>
+
+              <!-- Gráfico SVG de interés compuesto limpio y semántico -->
+              <div class="chart-wrapper" aria-hidden="true">
+                <svg class="growth-chart" viewBox="0 0 380 110" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <defs>
+                    <linearGradient id="chartAreaGrad" x1="0" y1="0" x2="0" y2="110" gradientUnits="userSpaceOnUse">
+                      <stop offset="0%" stop-color="#22C55E" stop-opacity="0.34" />
+                      <stop offset="100%" stop-color="#22C55E" stop-opacity="0.0" />
+                    </linearGradient>
+                    <linearGradient id="chartLineGrad" x1="0" y1="0" x2="380" y2="0" gradientUnits="userSpaceOnUse">
+                      <stop offset="0%" stop-color="#7C9232" />
+                      <stop offset="55%" stop-color="#22C55E" />
+                      <stop offset="100%" stop-color="#4ADE80" />
+                    </linearGradient>
+                  </defs>
+                  <!-- Líneas guía horizontales -->
+                  <line x1="0" y1="25" x2="380" y2="25" stroke="rgba(255,255,255,0.06)" stroke-dasharray="3 3" />
+                  <line x1="0" y1="60" x2="380" y2="60" stroke="rgba(255,255,255,0.06)" stroke-dasharray="3 3" />
+                  <line x1="0" y1="95" x2="380" y2="95" stroke="rgba(255,255,255,0.08)" />
+
+                  <!-- Área bajo la curva de interés compuesto -->
+                  <path
+                    d="M12 92 C 75 86, 120 76, 175 62 C 235 47, 295 32, 366 14 L 366 95 L 12 95 Z"
+                    fill="url(#chartAreaGrad)"
+                  />
+                  <!-- Línea principal de evolución -->
+                  <path
+                    d="M12 92 C 75 86, 120 76, 175 62 C 235 47, 295 32, 366 14"
+                    stroke="url(#chartLineGrad)"
+                    stroke-width="3"
+                    stroke-linecap="round"
+                  />
+                  <!-- Puntos de hito anual -->
+                  <circle cx="12" cy="92" r="4" fill="#9CB344" />
+                  <circle cx="100" cy="79" r="3.5" fill="#22C55E" />
+                  <circle cx="188" cy="59" r="3.5" fill="#22C55E" />
+                  <circle cx="276" cy="37" r="3.5" fill="#22C55E" />
+                  <circle cx="366" cy="14" r="5.5" fill="#4ADE80" stroke="#070A08" stroke-width="2" />
+                </svg>
+                <div class="chart-labels">
+                  <span>2021 · Inicio</span>
+                  <span>Value Investing</span>
+                  <span>Interés Compuesto (+11% anual)</span>
+                </div>
+              </div>
+
+              <div class="exec-module__pills">
+                <span class="mini-pill mini-pill--finance">Análisis Fundamental</span>
+                <span class="mini-pill mini-pill--finance">Margen de Seguridad</span>
+                <span class="mini-pill mini-pill--finance">Largo Plazo</span>
+              </div>
+            </div>
+
+            <!-- Bloque visual 2: Ingeniería de Software y Servicios Digitales -->
+            <div class="exec-module exec-module--tech">
+              <div class="exec-module__top">
+                <div>
+                  <span class="exec-module__kicker exec-module__kicker--tech">PATA II · INGENIERÍA DIGITAL</span>
+                  <h2 class="exec-module__heading">Software &amp; Web de Alto Impacto</h2>
+                </div>
+                <span class="tech-status-badge">Edge Ready</span>
+              </div>
+
+              <div class="tech-capabilities-grid">
+                <div class="tech-cap-item">
+                  <span class="tech-cap-item__icon" aria-hidden="true">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M12 2L2 7l10 5 10-5-10-5z" />
+                      <path d="M2 17l10 5 10-5" />
+                      <path d="M2 12l10 5 10-5" />
+                    </svg>
+                  </span>
+                  <div>
+                    <div class="tech-cap-item__title">Webs Corporativas</div>
+                    <div class="tech-cap-item__desc">Diseño UX/UI orientado a conversión</div>
+                  </div>
+                </div>
+
+                <div class="tech-cap-item">
+                  <span class="tech-cap-item__icon" aria-hidden="true">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <polyline points="16 18 22 12 16 6" />
+                      <polyline points="8 6 2 12 8 18" />
+                    </svg>
+                  </span>
+                  <div>
+                    <div class="tech-cap-item__title">Apps Web a Medida</div>
+                    <div class="tech-cap-item__desc">Soluciones dinámicas y escalables</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="exec-module__footer">
+                <span class="code-signature">&lt;LHValor status="optimizado" /&gt;</span>
+                <a href="#contacto" class="exec-quick-link">Solicitar propuesta →</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         3. LAS DOS PATAS ESTRATÉGICAS (SECCIÓN DUAL INTERACTIVA)
+         ===================================================================== -->
+    <section class="pillars-section section-padding" id="areas-estrategicas" aria-labelledby="pillars-heading">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow">Arquitectura Empresarial Dual</span>
+          <h2 class="section-title" id="pillars-heading">Las Dos Patas Estratégicas de LH Valor</h2>
+          <p class="section-description">
+            Operamos allí donde la disciplina analítica y la excelencia técnica generan ventajas competitivas reales: multiplicando el patrimonio a largo plazo e impulsando la transformación digital de empresas.
+          </p>
+
+          <!-- Selector interactivo para explorar ambas ramas o filtrar -->
+          <div class="pillar-switcher" role="tablist" aria-label="Filtrar áreas estratégicas de LH Valor">
+            <button
+              type="button"
+              class="pillar-tab active"
+              role="tab"
+              aria-selected="true"
+              data-pillar-filter="all"
+            >
+              Vista Dual Completa
+            </button>
+            <button
+              type="button"
+              class="pillar-tab pillar-tab--finance"
+              role="tab"
+              aria-selected="false"
+              data-pillar-filter="finance"
+            >
+              <span class="pillar-tab__dot pillar-tab__dot--finance" aria-hidden="true"></span>
+              Pata 1 · Renta Variable
+            </button>
+            <button
+              type="button"
+              class="pillar-tab pillar-tab--tech"
+              role="tab"
+              aria-selected="false"
+              data-pillar-filter="tech"
+            >
+              <span class="pillar-tab__dot pillar-tab__dot--tech" aria-hidden="true"></span>
+              Pata 2 · Servicios Digitales
+            </button>
+          </div>
+        </div>
+
+        <!-- Contenedor Dual de las Dos Patas -->
+        <div class="pillars-grid" id="pillars-grid">
+          <!-- ===============================================================
+               PATA 1: FONDO DE INVERSIÓN EN RENTA VARIABLE
+               =============================================================== -->
+          <article
+            class="pillar-card pillar-card--finance"
+            id="renta-variable"
+            data-pillar-category="finance"
+            aria-labelledby="pillar-finance-title"
+          >
+            <div class="pillar-card__glow" aria-hidden="true"></div>
+
+            <div class="pillar-card__top">
+              <div class="pillar-card__badge-row">
+                <span class="pillar-tag pillar-tag--finance">PATA ESTRATÉGICA I · GESTIÓN PATRIMONIAL</span>
+                <span class="pillar-icon pillar-icon--finance" aria-hidden="true">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M3 3v18h18" />
+                    <path d="m19 9-5 5-4-4-3 3" />
+                  </svg>
+                </span>
+              </div>
+
+              <h3 class="pillar-card__title" id="pillar-finance-title">
+                Fondo de Inversión en Renta Variable
+              </h3>
+
+              <p class="pillar-card__lead">
+                Gestión enfocada en el <strong>Value Investing riguroso a largo plazo</strong>, respaldada por un análisis fundamental disciplinado y una premisa innegociable: la preservación del capital antes de su multiplicación.
+              </p>
+            </div>
+
+            <!-- Métrica Destacada: 11% CAGR desde 2021 -->
+            <div class="cagr-highlight-box" aria-label="Métrica destacada del fondo">
+              <div class="cagr-highlight-box__main">
+                <div class="cagr-highlight-box__value-group">
+                  <span class="cagr-highlight-box__number">11%</span>
+                  <span class="cagr-highlight-box__unit">CAGR</span>
+                </div>
+                <div class="cagr-highlight-box__info">
+                  <strong class="cagr-highlight-box__title">Rentabilidad anual compuesta acumulada desde 2021</strong>
+                  <p class="cagr-highlight-box__sub">
+                    Crecimiento consistente logrado mediante selección de negocios extraordinarios adquiridos a valoraciones con amplio margen de seguridad.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Simulador interactivo rápido de capital compuesto al 11% -->
+              <div class="compound-simulator">
+                <div class="compound-simulator__header">
+                  <span class="compound-simulator__label">Proyección ilustrativa al ritmo histórico (11% anual):</span>
+                  <div class="compound-Copy-controls" role="group" aria-label="Horizonte temporal de inversión">
+                    <button type="button" class="horizon-btn" data-years="5">5 años</button>
+                    <button type="button" class="horizon-btn active" data-years="10">10 años</button>
+                    <button type="button" class="horizon-btn" data-years="15">15 años</button>
+                  </div>
+                </div>
+                <div class="compound-simulator__result">
+                  <div class="compound-stat">
+                    <span class="compound-stat__caption">Base referencia</span>
+                    <span class="compound-stat__val">100.000 €</span>
+                  </div>
+                  <div class="compound-arrow" aria-hidden="true">→</div>
+                  <div class="compound-stat">
+                    <span class="compound-stat__caption" id="sim-horizon-label">Valor estimado (10 años)</span>
+                    <span class="compound-stat__val compound-stat__val--accent" id="sim-final-value">283.942 €</span>
+                  </div>
+                  <div class="compound-stat">
+                    <span class="compound-stat__caption">Multiplicador</span>
+                    <span class="compound-stat__badge" id="sim-multiplier">2,84x</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Pilares del enfoque de inversión -->
+            <ul class="pillar-features" aria-label="Pilares del Fondo de Renta Variable">
+              <li class="pillar-features__item">
+                <span class="pillar-features__check pillar-features__check--finance" aria-hidden="true">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg>
+                </span>
+                <div>
+                  <strong>Value Investing y Análisis Fundamental Disciplinado:</strong>
+                  <span>Estudio exhaustivo de generación de caja libre (FCF), ventajas competitivas duraderas (<em>moats</em>), retornos sobre el capital empleado (ROCE) y calidad directiva.</span>
+                </div>
+              </li>
+              <li class="pillar-features__item">
+                <span class="pillar-features__check pillar-features__check--finance" aria-hidden="true">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg>
+                </span>
+                <div>
+                  <strong>Preservación de Capital y Margen de Seguridad:</strong>
+                  <span>Evitamos el endeudamiento excesivo y las modas especulativas, invirtiendo únicamente cuando el precio de mercado ofrece un descuento sustancial frente al valor intrínseco.</span>
+                </div>
+              </li>
+              <li class="pillar-features__item">
+                <span class="pillar-features__check pillar-features__check--finance" aria-hidden="true">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg>
+                </span>
+                <div>
+                  <strong>Propósito Centrado en el Partícipe:</strong>
+                  <span>Nuestro objetivo esencial es aportar <strong>valor real y tranquilidad patrimonial</strong> a los partícipes, construyendo riqueza intergeneracional con total transparencia.</span>
+                </div>
+              </li>
+            </ul>
+
+            <div class="pillar-card__footer">
+              <button
+                type="button"
+                class="btn btn--finance btn--full pillar-action-btn"
+                data-select-interest="Inversión en Renta Variable"
+              >
+                <span>Solicitar información del fondo</span>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M5 12h14" />
+                  <path d="m12 5 7 7-7 7" />
+                </svg>
+              </button>
+            </div>
+          </article>
+
+          <!-- ===============================================================
+               PATA 2: SERVICIOS DIGITALES Y DESARROLLO WEB
+               =============================================================== -->
+          <article
+            class="pillar-card pillar-card--tech"
+            id="servicios-digitales"
+            data-pillar-category="tech"
+            aria-labelledby="pillar-tech-title"
+          >
+            <div class="pillar-card__glow" aria-hidden="true"></div>
+
+            <div class="pillar-card__top">
+              <div class="pillar-card__badge-row">
+                <span class="pillar-tag pillar-tag--tech">PATA ESTRATÉGICA II · INGENIERÍA &amp; SOFTWARE</span>
+                <span class="pillar-icon pillar-icon--tech" aria-hidden="true">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="16 18 22 12 16 6" />
+                    <polyline points="8 6 2 12 8 18" />
+                  </svg>
+                </span>
+              </div>
+
+              <h3 class="pillar-card__title" id="pillar-tech-title">
+                Servicios Digitales y Desarrollo Web
+              </h3>
+
+              <p class="pillar-card__lead">
+                Diseño y desarrollo de <strong>páginas web de alto impacto, aplicaciones web personalizadas y soluciones de software</strong> concebidas para modernizar operaciones empresariales, proyectar autoridad de marca y multiplicar la captación de clientes.
+              </p>
+            </div>
+
+            <!-- Bloque Destacado: Estándares de Ingeniería Digital -->
+            <div class="tech-highlight-box" aria-label="Estándares de ingeniería y rendimiento">
+              <div class="tech-metrics-row">
+                <div class="tech-metric-item">
+                  <span class="tech-metric-item__val">Alta Conversión</span>
+                  <span class="tech-metric-item__lbl">Arquitectura UX/UI persuasiva</span>
+                </div>
+                <div class="tech-metric-item">
+                  <span class="tech-metric-item__val">Ultra Rápido</span>
+                  <span class="tech-metric-item__lbl">Despliegue Edge &amp; SEO Técnico</span>
+                </div>
+                <div class="tech-metric-item">
+                  <span class="tech-metric-item__val">Escalable</span>
+                  <span class="tech-metric-item__lbl">Código limpio y a medida</span>
+                </div>
+              </div>
+
+              <!-- Selector interactivo de soluciones digitales -->
+              <div class="service-preview-tabs">
+                <div class="service-preview-tabs__nav" role="tablist" aria-label="Explorar líneas de servicio digital">
+                  <button type="button" class="srv-tab active" data-service-tab="corporativo" role="tab" aria-selected="true">
+                    Webs Corporativas
+                  </button>
+                  <button type="button" class="srv-tab" data-service-tab="aplicaciones" role="tab" aria-selected="false">
+                    Apps Web Dinámicas
+                  </button>
+                  <button type="button" class="srv-tab" data-service-tab="optimizacion" role="tab" aria-selected="false">
+                    Optimización Digital
+                  </button>
+                </div>
+                <div class="service-preview-tabs__body" id="service-tab-content">
+                  <p class="service-preview-text" id="service-preview-text">
+                    <strong>Presencia institucional de élite:</strong> Diseñamos landing pages y portales corporativos rápidos, seguros y adaptados a dispositivos móviles que convierten visitantes en oportunidades reales de negocio.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Servicios detallados -->
+            <ul class="pillar-features" aria-label="Catálogo de Servicios Digitales">
+              <li class="pillar-features__item">
+                <span class="pillar-features__check pillar-features__check--tech" aria-hidden="true">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg>
+                </span>
+                <div>
+                  <strong>Sitios Web Corporativos de Alto Impacto:</strong>
+                  <span>Identidad digital sobria y diferencial, velocidad de carga instantánea, accesibilidad estructural y optimización SEO desde la primera línea de código.</span>
+                </div>
+              </li>
+              <li class="pillar-features__item">
+                <span class="pillar-features__check pillar-features__check--tech" aria-hidden="true">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg>
+                </span>
+                <div>
+                  <strong>Aplicaciones Web Dinámicas y Software a Medida:</strong>
+                  <span>Desarrollo de plataformas interactivas, paneles de control, calculadoras financieras, áreas de clientes y herramientas internas adaptadas al flujo exacto de tu empresa.</span>
+                </div>
+              </li>
+              <li class="pillar-features__item">
+                <span class="pillar-features__check pillar-features__check--tech" aria-hidden="true">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg>
+                </span>
+                <div>
+                  <strong>Optimización Digital para Empresas:</strong>
+                  <span>Modernización de sistemas heredados, mejora de rendimiento en buscadores, automatización de embudos de captación de leads y despliegue en infraestructura global.</span>
+                </div>
+              </li>
+            </ul>
+
+            <div class="pillar-card__footer">
+              <button
+                type="button"
+                class="btn btn--tech btn--full pillar-action-btn"
+                data-select-interest="Servicios Digitales / Web"
+              >
+                <span>Cotizar proyecto digital</span>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M5 12h14" />
+                  <path d="m12 5 7 7-7 7" />
+                </svg>
+              </button>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         4. FILOSOFÍA Y CREACIÓN DE VALOR
+         ===================================================================== -->
+    <section class="philosophy-section section-padding" id="filosofia" aria-labelledby="philosophy-heading">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow">Principios Innegociables</span>
+          <h2 class="section-title" id="philosophy-heading">Filosofía y Creación de Valor</h2>
+          <p class="section-description">
+            Tanto al asignar capital en los mercados financieros como al diseñar la arquitectura de un producto digital, aplicamos una misma cultura de excelencia, ética profesional y pensamiento a largo plazo.
+          </p>
+        </div>
+
+        <div class="philosophy-grid">
+          <!-- Principio 1: Rigor Analítico -->
+          <article class="philosophy-card">
+            <div class="philosophy-card__number" aria-hidden="true">01</div>
+            <div class="philosophy-card__icon philosophy-card__icon--amber" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="11" cy="11" r="8" />
+                <line x1="21" y1="21" x2="16.65" y2="16.65" />
+                <line x1="11" y1="8" x2="11" y2="14" />
+                <line x1="8" y1="11" x2="14" y2="11" />
+              </svg>
+            </div>
+            <h3 class="philosophy-card__title">Rigor Analítico y Técnico</h3>
+            <p class="philosophy-card__text">
+              No dejamos espacio a la improvisación. En renta variable estudiamos estados financieros, modelos de negocio y riesgos con profundidad quirúrgica; en desarrollo tecnológico construimos con código limpio, estándares web modernos y arquitecturas sólidas que perduran en el tiempo.
+            </p>
+            <div class="philosophy-card__tag">Decisiones basadas en fundamentos</div>
+          </article>
+
+          <!-- Principio 2: Alineación Total de Intereses -->
+          <article class="philosophy-card">
+            <div class="philosophy-card__number" aria-hidden="true">02</div>
+            <div class="philosophy-card__icon philosophy-card__icon--emerald" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                <path d="m9 12 2 2 4-4" />
+              </svg>
+            </div>
+            <h3 class="philosophy-card__title">Alineación Total de Intereses</h3>
+            <p class="philosophy-card__text">
+              Caminamos junto a nuestros partícipes y clientes. En el fondo mantenemos un compromiso patrimonial directo (<em>skin in the game</em>), y en cada desarrollo tecnológico trabajamos como un socio estratégico enfocado en que tu inversión digital genere retorno comercial real.
+            </p>
+            <div class="philosophy-card__tag">Confianza y transparencia absoluta</div>
+          </article>
+
+          <!-- Principio 3: Impacto Positivo Medible -->
+          <article class="philosophy-card">
+            <div class="philosophy-card__number" aria-hidden="true">03</div>
+            <div class="philosophy-card__icon philosophy-card__icon--cyan" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                <polyline points="22 4 12 14.01 9 11.01" />
+              </svg>
+            </div>
+            <h3 class="philosophy-card__title">Foco en Impacto Positivo Medible</h3>
+            <p class="philosophy-card__text">
+              El valor verdadero se demuestra con resultados verificables: una rentabilidad anual compuesta del <strong>11% desde 2021</strong> que protege y hace crecer el ahorro, y plataformas digitales que mejoran la conversión, la imagen corporativa y la eficiencia operativa de cada cliente.
+            </p>
+            <div class="philosophy-card__tag">Resultados tangibles y sostenibles</div>
+          </article>
+        </div>
+
+        <!-- Franja de síntesis institucional -->
+        <div class="philosophy-banner">
+          <div class="philosophy-banner__content">
+            <h3 class="philosophy-banner__title">
+              ¿Buscas hacer crecer tu patrimonio con serenidad o impulsar tu negocio en el entorno digital?
+            </h3>
+            <p class="philosophy-banner__text">
+              Hablemos directamente, sin intermediarios innecesarios y con una evaluación honesta de cómo podemos aportar valor a tus objetivos.
+            </p>
+          </div>
+          <div class="philosophy-banner__actions">
+            <a href="#contacto" class="btn btn--primary btn--lg">Iniciar conversación</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         5. FORMULARIO DE CAPTACIÓN DE LEADS (LEAD GENERATION & CONTACTO)
+         ===================================================================== -->
+    <section class="contact-section section-padding" id="contacto" aria-labelledby="contact-heading">
+      <div class="container">
+        <div class="contact-layout">
+          <!-- Columna izquierda: Información de contacto y canales directos -->
+          <div class="contact-info">
+            <span class="section-eyebrow">Contacto Directo</span>
+            <h2 class="section-title contact-info__title" id="contact-heading">
+              Construyamos valor duradero juntos
+            </h2>
+            <p class="contact-info__desc">
+              Completa el formulario para solicitar información detallada sobre el <strong>Fondo de Inversión en Renta Variable</strong>, pedir una propuesta para tu <strong>proyecto de desarrollo web / software</strong> o explorar sinergias en ambas áreas.
+            </p>
+
+            <!-- Puntos de valor de atención -->
+            <div class="contact-highlights">
+              <div class="contact-highlight-item">
+                <span class="contact-highlight-item__icon" aria-hidden="true">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10" />
+                    <polyline points="12 6 12 12 16 14" />
+                  </svg>
+                </span>
+                <div>
+                  <strong>Respuesta ágil y personalizada</strong>
+                  <p>Atención directa por parte de la dirección de LH Valor en menos de 24–48 horas laborables.</p>
+                </div>
+              </div>
+
+              <div class="contact-highlight-item">
+                <span class="contact-highlight-item__icon" aria-hidden="true">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
+                    <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+                  </svg>
+                </span>
+                <div>
+                  <strong>Estricta confidencialidad</strong>
+                  <p>Toda consulta patrimonial o estratégica se trata bajo absoluta reserva profesional.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Canales directos alternativos (Visibles y destacados) -->
+            <div class="direct-channels" aria-labelledby="direct-channels-title">
+              <h3 class="direct-channels__title" id="direct-channels-title">
+                Canales directos alternativos
+              </h3>
+
+              <div class="direct-channels__list">
+                <!-- Canal 1: Correo electrónico -->
+                <div class="channel-card">
+                  <div class="channel-card__icon channel-card__icon--mail" aria-hidden="true">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <rect x="2" y="4" width="20" height="16" rx="2" />
+                      <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+                    </svg>
+                  </div>
+                  <div class="channel-card__body">
+                    <span class="channel-card__label">Correo electrónico directo</span>
+                    <a href="mailto:hectorparedesreche@gmail.com" class="channel-card__link">
+                      hectorparedesreche@gmail.com
+                    </a>
+                  </div>
+                  <button
+                    type="button"
+                    class="copy-email-btn"
+                    id="copy-email-btn"
+                    data-copy-value="hectorparedesreche@gmail.com"
+                    aria-label="Copiar dirección de correo hectorparedesreche@gmail.com"
+                    title="Copiar correo"
+                  >
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                      <rect x="9" y="9" width="13" height="13" rx="2" ry="2" />
+                      <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1" />
+                    </svg>
+                    <span class="copy-email-btn__text">Copiar</span>
+                  </button>
+                </div>
+
+                <!-- Canal 2: Perfil en X -->
+                <a
+                  href="https://x.com/HParedesR"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="channel-card channel-card--interactive"
+                  aria-label="Contactar o seguir en X a @HParedesR (se abre en una nueva pestaña)"
+                >
+                  <div class="channel-card__icon channel-card__icon--x" aria-hidden="true">
+                    <svg width="19" height="19" viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                    </svg>
+                  </div>
+                  <div class="channel-card__body">
+                    <span class="channel-card__label">Perfil oficial en X</span>
+                    <span class="channel-card__link">@HParedesR</span>
+                  </div>
+                  <span class="channel-card__external" aria-hidden="true">
+                    <span>Abrir perfil</span>
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M7 17 17 7" />
+                      <path d="M7 7h10v10" />
+                    </svg>
+                  </span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Columna derecha: Formulario interactivo con validación en tiempo real -->
+          <div class="contact-form-wrapper">
+            <div class="form-card">
+              <div class="form-card__header">
+                <h3 class="form-card__title">Solicitud de Información o Propuesta</h3>
+                <p class="form-card__subtitle">
+                  Los campos marcados con <span class="required-mark" aria-hidden="true">*</span> son obligatorios.
+                </p>
+              </div>
+
+              <!-- Aviso dinámico cuando se preselecciona un área desde las tarjetas superiores -->
+              <div class="preselect-banner" id="preselect-banner" hidden aria-live="polite">
+                <span class="preselect-banner__dot" aria-hidden="true"></span>
+                <span id="preselect-banner-text">Área seleccionada: Inversión en Renta Variable</span>
+              </div>
+
+              <form id="lead-form" class="lead-form" novalidate>
+                <!-- Campo 1: Nombre y Apellidos -->
+                <div class="form-group" id="group-nombre">
+                  <label for="nombre" class="form-label">
+                    Nombre y Apellidos <span class="required-mark" aria-hidden="true">*</span>
+                  </label>
+                  <div class="input-wrapper">
+                    <input
+                      type="text"
+                      id="nombre"
+                      name="nombre"
+                      class="form-control"
+                      placeholder="Ej. Carlos Mendoza"
+                      autocomplete="name"
+                      required
+                      minlength="3"
+                      maxlength="100"
+                      aria-describedby="error-nombre"
+                    />
+                  </div>
+                  <span class="field-error" id="error-nombre" role="alert" aria-live="polite"></span>
+                </div>
+
+                <!-- Fila doble en escritorio: Correo y Teléfono -->
+                <div class="form-row-2">
+                  <!-- Campo 2: Correo electrónico -->
+                  <div class="form-group" id="group-email">
+                    <label for="email" class="form-label">
+                      Correo electrónico <span class="required-mark" aria-hidden="true">*</span>
+                    </label>
+                    <div class="input-wrapper">
+                      <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        class="form-control"
+                        placeholder="nombre@empresa.com"
+                        autocomplete="email"
+                        required
+                        aria-describedby="error-email"
+                      />
+                    </div>
+                    <span class="field-error" id="error-email" role="alert" aria-live="polite"></span>
+                  </div>
+
+                  <!-- Campo 3: Teléfono / WhatsApp (opcional) -->
+                  <div class="form-group" id="group-telefono">
+                    <label for="telefono" class="form-label">
+                      Teléfono / WhatsApp <span class="optional-tag">(Opcional)</span>
+                    </label>
+                    <div class="input-wrapper">
+                      <input
+                        type="tel"
+                        id="telefono"
+                        name="telefono"
+                        class="form-control"
+                        placeholder="Ej. +34 600 000 000"
+                        autocomplete="tel"
+                        aria-describedby="error-telefono"
+                      />
+                    </div>
+                    <span class="field-error" id="error-telefono" role="alert" aria-live="polite"></span>
+                  </div>
+                </div>
+
+                <!-- Campo 4: Área de interés (Selector desplegable + Píldoras interactivas sincronizadas) -->
+                <div class="form-group" id="group-interes">
+                  <label for="interes" class="form-label">
+                    Área de interés <span class="required-mark" aria-hidden="true">*</span>
+                  </label>
+
+                  <!-- Botones rápidos sincronizados con el selector para experiencia UX fluida -->
+                  <div class="interest-pills" role="group" aria-label="Selección rápida de área de interés">
+                    <button
+                      type="button"
+                      class="interest-pill active"
+                      data-interest-value="Inversión en Renta Variable"
+                    >
+                      Inversión en Renta Variable
+                    </button>
+                    <button
+                      type="button"
+                      class="interest-pill"
+                      data-interest-value="Servicios Digitales / Web"
+                    >
+                      Servicios Digitales / Web
+                    </button>
+                    <button
+                      type="button"
+                      class="interest-pill"
+                      data-interest-value="Ambos"
+                    >
+                      Ambos
+                    </button>
+                  </div>
+
+                  <div class="select-wrapper">
+                    <select
+                      id="interes"
+                      name="interes"
+                      class="form-control form-select"
+                      required
+                      aria-describedby="error-interes"
+                    >
+                      <option value="Inversión en Renta Variable" selected>Inversión en Renta Variable</option>
+                      <option value="Servicios Digitales / Web">Servicios Digitales / Web</option>
+                      <option value="Ambos">Ambos (Inversión + Servicios Digitales)</option>
+                    </select>
+                    <span class="select-chevron" aria-hidden="true">
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="6 9 12 15 18 9" />
+                      </svg>
+                    </span>
+                  </div>
+                  <span class="field-error" id="error-interes" role="alert" aria-live="polite"></span>
+                </div>
+
+                <!-- Campo 5: Mensaje o consulta -->
+                <div class="form-group" id="group-mensaje">
+                  <div class="form-label-row">
+                    <label for="mensaje" class="form-label">
+                      Mensaje o consulta <span class="required-mark" aria-hidden="true">*</span>
+                    </label>
+                    <span class="char-counter" id="char-counter" aria-live="polite">0 / 1000</span>
+                  </div>
+                  <div class="input-wrapper">
+                    <textarea
+                      id="mensaje"
+                      name="mensaje"
+                      class="form-control form-textarea"
+                      rows="4"
+                      placeholder="Cuéntanos brevemente tus objetivos de inversión o los detalles del proyecto digital que deseas desarrollar..."
+                      required
+                      minlength="10"
+                      maxlength="1000"
+                      aria-describedby="error-mensaje"
+                    ></textarea>
+                  </div>
+                  <span class="field-error" id="error-mensaje" role="alert" aria-live="polite"></span>
+                </div>
+
+                <!-- Botón de envío -->
+                <button type="submit" class="btn btn--primary btn--lg btn--full submit-btn" id="submit-btn">
+                  <span>Preparar y Enviar Consulta</span>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <line x1="22" y1="2" x2="11" y2="13" />
+                    <polygon points="22 2 15 22 11 13 2 9 22 2" />
+                  </svg>
+                </button>
+
+                <p class="form-footnote">
+                  Al enviar, se abrirá tu aplicación de correo predeterminada dirigida a <strong>hectorparedesreche@gmail.com</strong> con tu consulta estructurada lista para remitir.
+                </p>
+              </form>
+
+              <!-- Estado de éxito visual y elegante tras validar y disparar mailto -->
+              <div class="form-success" id="form-success" hidden aria-live="polite">
+                <div class="form-success__icon" aria-hidden="true">
+                  <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                    <polyline points="22 4 12 14.01 9 11.01" />
+                  </svg>
+                </div>
+
+                <h4 class="form-success__title">¡Consulta estructurada con éxito!</h4>
+                <p class="form-success__desc">
+                  Hemos abierto tu cliente de correo con el destinatario <strong>hectorparedesreche@gmail.com</strong> y todos los datos de tu mensaje listos para enviar.
+                </p>
+
+                <!-- Resumen de la consulta generada -->
+                <div class="form-success__summary">
+                  <div class="summary-line">
+                    <span class="summary-line__key">Asunto:</span>
+                    <strong class="summary-line__val" id="success-subject"></strong>
+                  </div>
+                  <div class="summary-line">
+                    <span class="summary-line__key">Área:</span>
+                    <span class="summary-line__val" id="success-interest"></span>
+                  </div>
+                </div>
+
+                <!-- Acciones de respaldo útiles (volver a abrir mailto o copiar cuerpo) -->
+                <div class="form-success__actions">
+                  <a href="mailto:hectorparedesreche@gmail.com" id="retry-mailto-link" class="btn btn--primary">
+                    Abrir cliente de correo nuevamente
+                  </a>
+                  <button type="button" id="copy-body-btn" class="btn btn--ghost">
+                    Copiar texto completo de la consulta
+                  </button>
+                </div>
+
+                <button type="button" id="reset-form-btn" class="form-success__reset">
+                  ← Redactar otra consulta
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- =====================================================================
+       6. FOOTER CORPORATIVO
+       ===================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Columna 1: Resumen de LH Valor -->
+        <div class="footer-brand-col">
+          <a href="#inicio" class="brand-logo" aria-label="LH Valor - Volver al inicio">
+            <span class="brand-logo__mark" aria-hidden="true">
+              <svg width="26" height="26" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="1.5" y="1.5" width="29" height="29" rx="6" fill="#000000" stroke="url(#footerLogoGrad)" stroke-width="2" />
+                <path d="M8 9.5V22.5H14.5V20H10.8V9.5H8Z" fill="#22C55E" />
+                <path d="M16.5 9.5V22.5H19.3V17.1H23.2V22.5H26V9.5H23.2V14.6H19.3V9.5H16.5Z" fill="url(#footerLogoGrad)" />
+                <defs>
+                  <linearGradient id="footerLogoGrad" x1="0" y1="0" x2="32" y2="32" gradientUnits="userSpaceOnUse">
+                    <stop offset="0%" stop-color="#16A34A" />
+                    <stop offset="50%" stop-color="#22C55E" />
+                    <stop offset="100%" stop-color="#4ADE80" />
+                  </linearGradient>
+                </defs>
+              </svg>
+            </span>
+            <span class="brand-logo__text">
+              <span class="brand-logo__lh">LH</span>
+              <span class="brand-logo__valor">VALOR</span>
+            </span>
+          </a>
+
+          <p class="footer-summary">
+            Firma enfocada en la creación de valor duradero a través de dos pilares complementarios: gestión patrimonial en <strong>Renta Variable</strong> bajo principios de <em>Value Investing</em> (11% CAGR desde 2021) y <strong>desarrollo de software y presencia web a medida</strong> para empresas.
+          </p>
+        </div>
+
+        <!-- Columna 2: Enlaces rápidos de navegación -->
+        <div class="footer-links-col">
+          <h3 class="footer-col-title">Navegación</h3>
+          <ul class="footer-nav-list">
+            <li><a href="#inicio" class="footer-link">Inicio</a></li>
+            <li><a href="#renta-variable" class="footer-link">Fondo de Renta Variable</a></li>
+            <li><a href="#servicios-digitales" class="footer-link">Servicios Digitales y Web</a></li>
+            <li><a href="#filosofia" class="footer-link">Filosofía y Valores</a></li>
+            <li><a href="#contacto" class="footer-link">Contacto</a></li>
+          </ul>
+        </div>
+
+        <!-- Columna 3: Especialidades -->
+        <div class="footer-links-col">
+          <h3 class="footer-col-title">Áreas de Valor</h3>
+          <ul class="footer-nav-list">
+            <li>
+              <a href="#renta-variable" class="footer-link" data-select-interest="Inversión en Renta Variable">
+                Value Investing a Largo Plazo
+              </a>
+            </li>
+            <li>
+              <a href="#renta-variable" class="footer-link" data-select-interest="Inversión en Renta Variable">
+                Preservación y Crecimiento Patrimonial
+              </a>
+            </li>
+            <li>
+              <a href="#servicios-digitales" class="footer-link" data-select-interest="Servicios Digitales / Web">
+                Sitios Web Corporativos
+              </a>
+            </li>
+            <li>
+              <a href="#servicios-digitales" class="footer-link" data-select-interest="Servicios Digitales / Web">
+                Aplicaciones Web a Medida
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Columna 4: Bloque de contacto directo -->
+        <div class="footer-contact-col">
+          <h3 class="footer-col-title">Contacto Directo</h3>
+          <ul class="footer-contact-list">
+            <li>
+              <a href="mailto:hectorparedesreche@gmail.com" class="footer-contact-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <rect x="2" y="4" width="20" height="16" rx="2" />
+                  <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+                </svg>
+                <span>hectorparedesreche@gmail.com</span>
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://x.com/HParedesR"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="footer-contact-item"
+              >
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                </svg>
+                <span>@HParedesR en X</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Aviso legal de inversión, privacidad y copyright -->
+      <div class="footer-bottom">
+        <p class="legal-disclaimer">
+          <strong>Aviso legal e información importante:</strong> El contenido de este sitio web tiene carácter meramente informativo y corporativo, y no constituye asesoramiento financiero personalizado ni una oferta pública de suscripción de valores. Rentabilidades pasadas (como el 11% de rentabilidad anual compuesta acumulada desde 2021) no garantizan ni presuponen rentabilidades futuras. Toda inversión en renta variable conlleva riesgos de mercado. Los datos facilitados a través de los canales de contacto se emplean exclusivamente para atender la consulta solicitada con estricta confidencialidad.
+        </p>
+
+        <div class="footer-copyright-row">
+          <p>&copy; <span id="current-year">2026</span> <strong>LH Valor</strong>. Todos los derechos reservados.</p>
+          <p class="footer-edge-note">Optimizado para despliegue de alto rendimiento en Cloudflare Pages.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Script principal ES6+ (ruta relativa para Cloudflare Pages) -->
+  <script src="./app.js" defer></script>
+</body>
+</html>

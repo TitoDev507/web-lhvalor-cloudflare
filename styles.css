@@ -436,6 +436,8 @@ button {
   padding: 0.42rem 0.85rem 0.42rem 0.55rem;
   border-radius: var(--radius-sm);
   border: 1px solid rgba(34, 197, 94, 0.42);
+  white-space: nowrap;
+  flex-shrink: 0;
   box-shadow:
     0 6px 20px rgba(0, 0, 0, 0.85),
     inset 0 1px 0 rgba(74, 222, 128, 0.14);
@@ -476,6 +478,8 @@ button {
   display: inline-flex;
   align-items: baseline;
   gap: 0.28rem;
+  white-space: nowrap;
+  flex-shrink: 0;
 }
 
 .brand-logo__lh {
@@ -495,10 +499,12 @@ button {
   text-transform: uppercase;
   letter-spacing: 0.08em;
   color: var(--dollar-green);
-  padding: 0.14rem 0.48rem;
+  padding: 0.16rem 0.52rem;
   border-radius: 4px;
   background: #050806;
   border: 1px solid rgba(34, 197, 94, 0.32);
+  white-space: nowrap;
+  flex-shrink: 0;
 }
 
 /* Menú de navegación (Móvil primero) */

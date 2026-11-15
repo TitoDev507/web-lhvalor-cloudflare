@@ -492,21 +492,6 @@ button {
   -webkit-text-fill-color: var(--dollar-green-bright);
 }
 
-.brand-logo__tag {
-  display: none;
-  font-family: var(--font-mono);
-  font-size: 0.65rem;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  color: var(--dollar-green);
-  padding: 0.16rem 0.52rem;
-  border-radius: 4px;
-  background: #050806;
-  border: 1px solid rgba(34, 197, 94, 0.32);
-  white-space: nowrap;
-  flex-shrink: 0;
-}
-
 /* Menú de navegación (Móvil primero) */
 .nav-menu {
   position: fixed;
@@ -2288,10 +2273,6 @@ button {
     padding-inline: 1.85rem;
   }
 
-  .brand-logo__tag {
-    display: inline-block;
-  }
-
   .social-x-btn__handle {
     display: inline;
   }
@@ -2395,6 +2376,10 @@ button {
     flex-direction: row;
     align-items: center;
     gap: 0.3rem;
+  }
+
+  .nav-link {
+    white-space: nowrap;
   }
 
   .btn--nav {

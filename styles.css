@@ -1,92 +1,90 @@
 /* ==========================================================================
    LH VALOR — HOJA DE ESTILOS PRINCIPAL (styles.css)
-   Rediseño Visual: Estética "Nexus" — Verde Dólar, Oliva Técnico, Crema y Negro
+   Sistema de Diseño: Crema & Dorado (Estatus Patrimonial) + Verde Dólar
+   (Creación de Valor y Generación de Riqueza)
    Optimizado para despliegue estático en Cloudflare Pages
    ========================================================================== */
 
 /* --------------------------------------------------------------------------
-   1. VARIABLES CSS (SISTEMA DE DISEÑO INSPIRADO EN LA REFERENCIA)
+   1. VARIABLES CSS (SISTEMA DE DISEÑO CREMA, ORO Y VERDE DÓLAR)
    -------------------------------------------------------------------------- */
 :root {
-  /* Fondos negros de terminal y superficies oscuras */
-  --bg-primary: #070A08;
-  --bg-secondary: #0B100D;
-  --bg-elevated: #0A0E0C;
-  --bg-surface: #111714;
-  --bg-console: #080B09;
-  --bg-glass: rgba(11, 16, 13, 0.82);
-  --bg-header-glass: rgba(7, 10, 8, 0.9);
+  /* Tonos Crema, Marfil y Champán (Estatus, amplitud y sofisticación) */
+  --bg-primary: #F8F4EC;
+  --bg-secondary: #EFE8D8;
+  --bg-elevated: #FFFDF8;
+  --bg-surface: #F3ECDD;
+  --bg-header-glass: rgba(248, 244, 236, 0.92);
 
-  /* Paleta Verde Dólar, Bosque, Oliva y Crema (de la imagen de referencia) */
-  --dollar-green: #22C55E;
+  /* Superficies oscuras de prestigio (Contraste ejecutivo y footer) */
+  --bg-prestige: #0B1912;
+  --bg-prestige-card: #102218;
+  --bg-prestige-deep: #07110C;
+
+  /* Tonos Dorados (Prestigio, solidez institucional y exclusividad) */
+  --gold-primary: #B58932;
+  --gold-bright: #D4AF37;
+  --gold-deep: #85611B;
+  --gold-champagne: #E6D3A3;
+  --gold-surface: rgba(181, 137, 50, 0.11);
+  --border-gold: rgba(181, 137, 50, 0.35);
+
+  /* Tonos Verde Dólar (Aportación de valor tangible y generación de dinero) */
+  --dollar-green: #146B3A;
+  --dollar-green-hover: #10572F;
+  --dollar-green-deep: #0B3E22;
+  --dollar-green-vivid: #22C55E;
   --dollar-green-bright: #4ADE80;
-  --dollar-green-deep: #0E5A2A;
-  --dollar-green-forest: #0A3F1D;
-  --olive-moss: #7C9232;
-  --olive-moss-light: #9CB344;
-  --warm-ivory: #F2EFE4;
-  --warm-sand: #D8D3BE;
+  --dollar-surface: rgba(20, 107, 58, 0.09);
+  --border-dollar: rgba(20, 107, 58, 0.3);
 
-  /* Bordes técnicos y divisores tipo consola */
-  --border-subtle: rgba(255, 255, 255, 0.08);
-  --border-hover: rgba(255, 255, 255, 0.18);
-  --border-finance: rgba(34, 197, 94, 0.38);
-  --border-tech: rgba(156, 179, 68, 0.38);
+  /* Bordes y divisores refinados */
+  --border-subtle: rgba(20, 30, 23, 0.1);
+  --border-hover: rgba(181, 137, 50, 0.5);
 
-  /* Jerarquía de texto (blanco hueso cálido y grises verdosos técnicos) */
-  --text-primary: #F3F1E8;
-  --text-secondary: #B8C2BA;
-  --text-muted: #78867C;
-
-  /* Acentos Financieros (Verde Dólar y Esmeralda Institucional) */
-  --finance-amber: #859E35;
-  --finance-amber-light: #A8C249;
-  --finance-emerald: #16A34A;
-  --finance-emerald-light: #22C55E;
-  --finance-surface: rgba(22, 163, 74, 0.12);
-
-  /* Acentos Tecnológicos (Oliva Luminoso, Crema Técnico y Verde Terminal) */
-  --tech-blue: #15803D;
-  --tech-blue-light: #22C55E;
-  --tech-cyan: #9CB344;
-  --tech-cyan-light: #D8D3BE;
-  --tech-surface: rgba(124, 146, 50, 0.12);
+  /* Jerarquía de texto (Alto contraste AAA sobre crema) */
+  --text-primary: #141E17;
+  --text-secondary: #3E4C43;
+  --text-muted: #66736B;
+  --text-on-dark: #F8F4EC;
+  --text-on-dark-muted: #B9C7BE;
 
   /* Estados semánticos del formulario */
-  --state-error: #F87171;
-  --state-error-bg: rgba(248, 113, 113, 0.08);
-  --state-success: #22C55E;
-  --state-success-bg: rgba(34, 197, 94, 0.12);
+  --state-error: #B91C1C;
+  --state-error-bg: rgba(185, 28, 28, 0.06);
+  --state-success: #146B3A;
+  --state-success-bg: rgba(20, 107, 58, 0.1);
 
-  /* Tipografías con fuerte presencia técnica y editorial */
+  /* Tipografías: Serif de prestigio + Sans moderna + Mono financiera */
+  --font-serif: 'Playfair Display', Georgia, 'Times New Roman', serif;
   --font-display: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
 
-  /* Geometría arquitectónica (esquinas más precisas y sobrias como en la imagen) */
+  /* Geometría editorial sobria */
   --radius-sm: 6px;
-  --radius-md: 8px;
-  --radius-lg: 12px;
-  --radius-xl: 16px;
+  --radius-md: 10px;
+  --radius-lg: 14px;
+  --radius-xl: 18px;
   --radius-pill: 9999px;
 
-  /* Sombras profundas de consola flotante */
+  /* Sombras cálidas y refinadas */
   --shadow-card:
-    0 30px 60px -15px rgba(0, 0, 0, 0.88),
-    0 0 0 1px rgba(255, 255, 255, 0.06);
-  --shadow-glow-finance:
-    0 18px 40px -10px rgba(14, 90, 42, 0.55),
-    0 0 0 1px rgba(34, 197, 94, 0.28);
-  --shadow-glow-tech:
-    0 18px 40px -10px rgba(124, 146, 50, 0.35),
-    0 0 0 1px rgba(216, 211, 190, 0.22);
+    0 22px 48px -18px rgba(17, 28, 20, 0.14),
+    0 4px 12px -4px rgba(181, 137, 50, 0.1);
+  --shadow-card-hover:
+    0 28px 56px -16px rgba(17, 28, 20, 0.2),
+    0 8px 20px -6px rgba(181, 137, 50, 0.18);
+  --shadow-prestige:
+    0 32px 68px -18px rgba(8, 20, 13, 0.45),
+    0 0 0 1px rgba(212, 175, 55, 0.28);
 
-  --transition-fast: 160ms cubic-bezier(0.16, 1, 0.3, 1);
-  --transition-base: 260ms cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-fast: 170ms cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-base: 280ms cubic-bezier(0.16, 1, 0.3, 1);
 
-  /* Espaciados y contenedor */
+  /* Contenedor y cabecera */
   --container-max: 1240px;
-  --header-height: 78px;
+  --header-height: 80px;
 }
 
 /* --------------------------------------------------------------------------
@@ -110,13 +108,12 @@ html {
 body {
   background-color: var(--bg-primary);
   background-image:
-    radial-gradient(ellipse 80% 50% at 15% 8%, rgba(14, 90, 42, 0.42) 0%, transparent 65%),
-    radial-gradient(ellipse 70% 45% at 88% 22%, rgba(124, 146, 50, 0.26) 0%, transparent 65%),
-    radial-gradient(ellipse 60% 40% at 50% 0%, rgba(216, 211, 190, 0.1) 0%, transparent 55%),
-    radial-gradient(ellipse 75% 50% at 20% 75%, rgba(14, 90, 42, 0.28) 0%, transparent 70%);
+    radial-gradient(ellipse 80% 45% at 12% 4%, rgba(212, 175, 55, 0.14) 0%, transparent 65%),
+    radial-gradient(ellipse 70% 45% at 88% 14%, rgba(20, 107, 58, 0.1) 0%, transparent 65%),
+    radial-gradient(ellipse 75% 50% at 50% 60%, rgba(230, 211, 163, 0.22) 0%, transparent 70%);
   color: var(--text-primary);
   font-family: var(--font-sans);
-  line-height: 1.62;
+  line-height: 1.65;
   letter-spacing: -0.008em;
   overflow-x: hidden;
   position: relative;
@@ -155,7 +152,7 @@ button {
   border: none;
 }
 
-/* Foco visible en verde dólar */
+/* Foco visible accesible en verde dólar */
 :focus-visible {
   outline: 2px solid var(--dollar-green);
   outline-offset: 3px;
@@ -168,10 +165,10 @@ button {
   left: 16px;
   z-index: 9999;
   background: var(--dollar-green);
-  color: #000000;
+  color: var(--bg-elevated);
   font-family: var(--font-mono);
   font-size: 0.82rem;
-  font-weight: 700;
+  font-weight: 600;
   padding: 10px 18px;
   border-radius: var(--radius-sm);
   transition: top var(--transition-fast);
@@ -182,44 +179,41 @@ button {
 }
 
 /* --------------------------------------------------------------------------
-   3. ATMÓSFERA DE FONDO (MATRIZ DE PUNTOS Y HALOS ORGÁNICOS DE LA IMAGEN)
+   3. ATMÓSFERA DE FONDO Y UTILIDADES GLOBALES
    -------------------------------------------------------------------------- */
 .ambient-glow {
   position: fixed;
-  width: 620px;
-  height: 620px;
+  width: 600px;
+  height: 600px;
   border-radius: 50%;
-  filter: blur(130px);
-  opacity: 0.24;
+  filter: blur(140px);
+  opacity: 0.22;
   pointer-events: none;
   z-index: -2;
 }
 
 .ambient-glow--finance {
-  top: -160px;
+  top: -180px;
   left: -140px;
-  background: radial-gradient(circle, #147A38 0%, #0E5A2A 55%, transparent 100%);
+  background: radial-gradient(circle, rgba(212, 175, 55, 0.55) 0%, transparent 70%);
 }
 
 .ambient-glow--tech {
-  top: 28%;
+  top: 26%;
   right: -180px;
-  background: radial-gradient(circle, #8CA33B 0%, #D8D3BE 45%, transparent 100%);
-  opacity: 0.18;
+  background: radial-gradient(circle, rgba(20, 107, 58, 0.35) 0%, transparent 70%);
 }
 
-/* Textura matricial tipo dot-matrix / ASCII inspirada en los fondos de la imagen */
+/* Retícula arquitectónica dorada muy sutil sobre fondo crema */
 .bg-grid-pattern {
   position: fixed;
   inset: 0;
   z-index: -1;
   pointer-events: none;
   background-image:
-    radial-gradient(rgba(74, 222, 128, 0.16) 1px, transparent 1px),
-    radial-gradient(rgba(216, 211, 190, 0.08) 1px, transparent 1px);
-  background-size: 16px 16px, 32px 32px;
-  background-position: 0 0, 8px 8px;
-  mask-image: radial-gradient(ellipse 90% 75% at 50% 25%, rgba(0, 0, 0, 0.85) 20%, transparent 90%);
+    radial-gradient(rgba(181, 137, 50, 0.2) 1px, transparent 1px);
+  background-size: 26px 26px;
+  mask-image: radial-gradient(ellipse 90% 70% at 50% 25%, rgba(0, 0, 0, 0.65) 15%, transparent 88%);
 }
 
 .container {
@@ -234,82 +228,82 @@ button {
 }
 
 .section-header {
-  max-width: 740px;
+  max-width: 750px;
   margin-inline: auto;
   text-align: center;
   margin-bottom: 3.5rem;
 }
 
-/* Etiquetas superiores estilo "+ DISCRETE" de la imagen */
+/* Etiquetas superiores de estatus en oro cepillado sobre marfil */
 .section-eyebrow {
   display: inline-flex;
   align-items: center;
-  gap: 0.45rem;
+  gap: 0.5rem;
   font-family: var(--font-mono);
-  font-size: 0.74rem;
+  font-size: 0.72rem;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.14em;
-  color: var(--dollar-green-bright);
-  background: #060907;
-  border: 1px solid rgba(34, 197, 94, 0.28);
-  padding: 0.38rem 0.9rem;
-  border-radius: var(--radius-sm);
+  color: var(--gold-deep);
+  background: var(--bg-elevated);
+  border: 1px solid var(--border-gold);
+  padding: 0.4rem 0.95rem;
+  border-radius: var(--radius-pill);
   margin-bottom: 1.15rem;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 4px 14px rgba(181, 137, 50, 0.12);
 }
 
 .section-eyebrow::before {
-  content: '+';
-  color: var(--dollar-green);
-  font-weight: 700;
+  content: '◆';
+  font-size: 0.6rem;
+  color: var(--gold-primary);
 }
 
 .section-title {
-  font-family: var(--font-display);
-  font-size: clamp(1.95rem, 3.6vw, 2.85rem);
+  font-family: var(--font-serif);
+  font-size: clamp(2rem, 3.8vw, 3rem);
   font-weight: 700;
-  line-height: 1.1;
-  letter-spacing: -0.035em;
-  color: var(--warm-ivory);
+  line-height: 1.12;
+  letter-spacing: -0.02em;
+  color: var(--text-primary);
   margin-bottom: 1.1rem;
 }
 
 .section-description {
-  font-size: 1.02rem;
+  font-size: 1.03rem;
   color: var(--text-secondary);
-  line-height: 1.65;
+  line-height: 1.68;
 }
 
-/* Gradientes de texto en tonos verde dólar, oliva y crema */
+/* Énfasis cromático en titulares: Verde Dólar (valor) y Dorado (estatus) */
 .text-gradient--finance {
-  background: linear-gradient(135deg, #4ADE80 0%, #22C55E 55%, #A8C249 100%);
+  background: linear-gradient(135deg, #0D552D 0%, #146B3A 55%, #1E8A4C 100%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
 }
 
 .text-gradient--tech {
-  background: linear-gradient(135deg, #F2EFE4 0%, #D8D3BE 50%, #9CB344 100%);
+  background: linear-gradient(135deg, #85611B 0%, #B58932 55%, #C99B3B 100%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
 }
 
 /* --------------------------------------------------------------------------
-   4. SISTEMA DE BOTONES (ESTILO CONSOLA NEXUS DE LA IMAGEN)
+   4. SISTEMA DE BOTONES (VERDE DÓLAR, DORADO Y MARFIL)
    -------------------------------------------------------------------------- */
 .btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 0.6rem;
-  font-family: var(--font-sans);
+  font-family: var(--font-display);
   font-weight: 600;
-  font-size: 0.9rem;
-  letter-spacing: -0.01em;
+  font-size: 0.92rem;
+  letter-spacing: -0.005em;
   line-height: 1.2;
-  padding: 0.78rem 1.35rem;
+  padding: 0.82rem 1.45rem;
   border-radius: var(--radius-sm);
   border: 1px solid transparent;
   transition:
@@ -322,7 +316,7 @@ button {
 }
 
 .btn:hover {
-  transform: translateY(-1px);
+  transform: translateY(-2px);
 }
 
 .btn:active {
@@ -330,92 +324,86 @@ button {
 }
 
 .btn--lg {
-  padding: 0.92rem 1.55rem;
-  font-size: 0.94rem;
+  padding: 0.96rem 1.65rem;
+  font-size: 0.96rem;
 }
 
 .btn--full {
   width: 100%;
 }
 
-/* Botón primario: Blanco hueso/crema sólido con texto negro como en el centro de la imagen */
+/* Botón primario: Verde Dólar institucional con fino filete dorado */
 .btn--primary {
-  background: var(--warm-ivory);
-  color: #060907;
-  border-color: var(--warm-ivory);
-  box-shadow: 0 10px 26px -6px rgba(0, 0, 0, 0.75);
+  background: linear-gradient(135deg, var(--dollar-green-deep) 0%, var(--dollar-green) 100%);
+  color: var(--bg-elevated);
+  border-color: rgba(212, 175, 55, 0.45);
+  box-shadow: 0 10px 24px -8px rgba(20, 107, 58, 0.45);
 }
 
 .btn--primary:hover {
-  background: var(--dollar-green);
-  border-color: var(--dollar-green);
-  color: #000000;
-  box-shadow: 0 12px 30px -6px rgba(34, 197, 94, 0.45);
+  background: linear-gradient(135deg, var(--dollar-green) 0%, #1A8348 100%);
+  border-color: var(--gold-bright);
+  box-shadow: 0 14px 30px -8px rgba(20, 107, 58, 0.55);
 }
 
-/* Botón Pata Financiera: Verde Dólar profundo con borde luminoso */
+/* Botón Vertical 1 (Fondo): Verde Dólar profundo orientado a generación de valor */
 .btn--finance {
-  background: #0F5E2C;
-  color: var(--warm-ivory);
-  border-color: rgba(74, 222, 128, 0.45);
-  box-shadow:
-    inset 0 1px 0 rgba(255, 255, 255, 0.14),
-    0 14px 30px -8px rgba(14, 90, 42, 0.7);
+  background: linear-gradient(135deg, #0E4D2A 0%, var(--dollar-green) 100%);
+  color: var(--bg-elevated);
+  border-color: rgba(212, 175, 55, 0.42);
+  box-shadow: 0 12px 26px -8px rgba(20, 107, 58, 0.42);
 }
 
 .btn--finance:hover {
-  background: #15803D;
-  border-color: var(--dollar-green-bright);
-  color: #FFFFFF;
-  box-shadow:
-    inset 0 1px 0 rgba(255, 255, 255, 0.2),
-    0 16px 34px -6px rgba(34, 197, 94, 0.45);
+  background: linear-gradient(135deg, var(--dollar-green) 0%, #1C8B4D 100%);
+  border-color: var(--gold-bright);
+  box-shadow: 0 16px 32px -8px rgba(20, 107, 58, 0.52);
 }
 
-/* Botón Pata Tecnológica: Consola negra con borde técnico fino como el botón derecho de la imagen */
+/* Botón Vertical 2 (Servicios Digitales): Marfil con borde dorado de estatus */
 .btn--tech {
-  background: #0B100D;
-  color: var(--warm-ivory);
-  border-color: rgba(242, 239, 228, 0.22);
-  box-shadow: 0 12px 28px -8px rgba(0, 0, 0, 0.8);
+  background: var(--bg-elevated);
+  color: var(--text-primary);
+  border-color: var(--gold-primary);
+  box-shadow: 0 8px 20px -8px rgba(181, 137, 50, 0.25);
 }
 
 .btn--tech:hover {
-  background: #151D18;
-  border-color: var(--olive-moss-light);
-  color: var(--dollar-green-bright);
+  background: linear-gradient(135deg, #C79A3B 0%, var(--gold-primary) 100%);
+  border-color: var(--gold-deep);
+  color: var(--bg-elevated);
+  box-shadow: 0 14px 28px -8px rgba(181, 137, 50, 0.45);
 }
 
 .btn--ghost {
-  background: #0A0E0C;
-  color: var(--text-secondary);
+  background: var(--bg-surface);
+  color: var(--text-primary);
   border-color: var(--border-subtle);
 }
 
 .btn--ghost:hover {
-  background: #121915;
-  color: var(--warm-ivory);
-  border-color: var(--border-hover);
+  background: var(--bg-secondary);
+  border-color: var(--gold-primary);
 }
 
 /* --------------------------------------------------------------------------
-   5. HEADER Y LOGOTIPO LH VALOR (VERDE DÓLAR Y FONDO NEGRO)
+   5. HEADER Y LOGOTIPO LH VALOR (VERDE DÓLAR Y FONDO NEGRO SOBRE CREMA)
    -------------------------------------------------------------------------- */
 .site-header {
   position: sticky;
   top: 0;
   z-index: 100;
   height: var(--header-height);
-  background: rgba(7, 10, 8, 0.82);
-  backdrop-filter: blur(18px);
-  -webkit-backdrop-filter: blur(18px);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+  background: rgba(248, 244, 236, 0.86);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(181, 137, 50, 0.22);
   transition: background-color var(--transition-base), box-shadow var(--transition-base);
 }
 
 .site-header.is-scrolled {
   background: var(--bg-header-glass);
-  box-shadow: 0 14px 36px -10px rgba(0, 0, 0, 0.85);
+  box-shadow: 0 10px 30px -12px rgba(20, 30, 23, 0.12);
 }
 
 .navbar {
@@ -426,28 +414,28 @@ button {
   gap: 1rem;
 }
 
-/* LOGOTIPO LH VALOR: Color Verde Dólar y Fondo Negro Puro */
+/* LOGOTIPO LH VALOR: Conserva color Verde Dólar y Fondo Negro Puro */
 .brand-logo {
   display: inline-flex;
   align-items: center;
   gap: 0.65rem;
   font-family: var(--font-display);
   background-color: #000000;
-  padding: 0.42rem 0.85rem 0.42rem 0.55rem;
+  padding: 0.44rem 0.9rem 0.44rem 0.56rem;
   border-radius: var(--radius-sm);
-  border: 1px solid rgba(34, 197, 94, 0.42);
+  border: 1px solid rgba(212, 175, 55, 0.55);
   white-space: nowrap;
   flex-shrink: 0;
   box-shadow:
-    0 6px 20px rgba(0, 0, 0, 0.85),
-    inset 0 1px 0 rgba(74, 222, 128, 0.14);
+    0 8px 22px -6px rgba(0, 0, 0, 0.35),
+    inset 0 1px 0 rgba(212, 175, 55, 0.22);
   transition: border-color var(--transition-fast), box-shadow var(--transition-fast), transform var(--transition-fast);
 }
 
 .brand-logo:hover {
-  border-color: var(--dollar-green-bright);
+  border-color: var(--gold-bright);
   box-shadow:
-    0 8px 24px rgba(22, 163, 74, 0.28),
+    0 10px 26px -6px rgba(20, 107, 58, 0.38),
     inset 0 1px 0 rgba(74, 222, 128, 0.25);
   transform: translateY(-1px);
 }
@@ -460,21 +448,21 @@ button {
   border-radius: 5px;
 }
 
-/* Forzar el icono SVG del logo a verde dólar sobre negro */
+/* Icono SVG del logo en verde dólar sobre negro */
 .brand-logo__mark svg rect {
   fill: #000000;
-  stroke: var(--dollar-green) !important;
+  stroke: var(--dollar-green-vivid) !important;
 }
 
 .brand-logo__mark svg path {
-  fill: var(--dollar-green) !important;
+  fill: var(--dollar-green-vivid) !important;
 }
 
 .brand-logo__text {
   font-size: 1.18rem;
   font-weight: 800;
   text-transform: uppercase;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.05em;
   display: inline-flex;
   align-items: baseline;
   gap: 0.28rem;
@@ -483,7 +471,7 @@ button {
 }
 
 .brand-logo__lh {
-  color: var(--dollar-green);
+  color: var(--dollar-green-vivid);
 }
 
 .brand-logo__valor {
@@ -498,8 +486,8 @@ button {
   top: var(--header-height);
   left: 0;
   right: 0;
-  background: #080B09;
-  border-bottom: 1px solid var(--border-subtle);
+  background: var(--bg-elevated);
+  border-bottom: 1px solid var(--border-gold);
   padding: 1.5rem 1.25rem;
   transform: translateY(-120%);
   opacity: 0;
@@ -508,7 +496,7 @@ button {
     transform var(--transition-base),
     opacity var(--transition-base),
     visibility var(--transition-base);
-  box-shadow: 0 28px 56px rgba(0, 0, 0, 0.9);
+  box-shadow: 0 24px 48px rgba(20, 30, 23, 0.16);
 }
 
 .nav-menu.is-open {
@@ -525,20 +513,19 @@ button {
 
 .nav-link {
   display: block;
-  padding: 0.55rem 0.85rem;
+  padding: 0.55rem 0.9rem;
   border-radius: var(--radius-sm);
-  font-family: var(--font-mono);
-  font-size: 0.82rem;
-  font-weight: 500;
-  letter-spacing: 0.02em;
+  font-family: var(--font-display);
+  font-size: 0.88rem;
+  font-weight: 600;
   color: var(--text-secondary);
   transition: color var(--transition-fast), background-color var(--transition-fast);
 }
 
 .nav-link:hover,
 .nav-link.active {
-  color: var(--dollar-green-bright);
-  background: rgba(34, 197, 94, 0.08);
+  color: var(--dollar-green);
+  background: var(--dollar-surface);
 }
 
 .nav-mobile-actions {
@@ -561,13 +548,13 @@ button {
   display: inline-flex;
   align-items: center;
   gap: 0.45rem;
-  padding: 0.52rem 0.8rem;
+  padding: 0.54rem 0.85rem;
   border-radius: var(--radius-sm);
-  background: #0A0E0C;
-  border: 1px solid var(--border-subtle);
-  color: var(--text-secondary);
+  background: var(--bg-elevated);
+  border: 1px solid var(--border-gold);
+  color: var(--text-primary);
   font-size: 0.82rem;
-  font-weight: 500;
+  font-weight: 600;
   transition:
     color var(--transition-fast),
     background-color var(--transition-fast),
@@ -576,9 +563,9 @@ button {
 }
 
 .social-x-btn:hover {
-  color: var(--warm-ivory);
-  background: #111814;
-  border-color: rgba(34, 197, 94, 0.35);
+  color: var(--dollar-green);
+  background: var(--bg-surface);
+  border-color: var(--dollar-green);
   transform: translateY(-1px);
 }
 
@@ -595,8 +582,8 @@ button {
 
 .btn--nav {
   display: none;
-  padding: 0.56rem 1.05rem;
-  font-size: 0.84rem;
+  padding: 0.58rem 1.15rem;
+  font-size: 0.86rem;
 }
 
 /* Botón Hamburguesa Móvil */
@@ -604,8 +591,8 @@ button {
   width: 40px;
   height: 40px;
   border-radius: var(--radius-sm);
-  border: 1px solid var(--border-subtle);
-  background: #0A0E0C;
+  border: 1px solid var(--border-gold);
+  background: var(--bg-elevated);
   display: inline-flex;
   flex-direction: column;
   align-items: center;
@@ -616,7 +603,7 @@ button {
 .menu-toggle__bar {
   width: 18px;
   height: 2px;
-  background-color: var(--warm-ivory);
+  background-color: var(--text-primary);
   border-radius: 2px;
   transition: transform var(--transition-fast), opacity var(--transition-fast);
 }
@@ -634,7 +621,7 @@ button {
 }
 
 /* --------------------------------------------------------------------------
-   6. HERO SECTION (PROPUESTA DE VALOR E INTERFAZ DE CONSOLA)
+   6. HERO SECTION (ESTATUS CREMA-ORO + PANEL EJECUTIVO DE PRESTIGIO)
    -------------------------------------------------------------------------- */
 .hero-section {
   padding-top: 3.5rem;
@@ -649,7 +636,7 @@ button {
   align-items: center;
 }
 
-/* Insignias destacadas estilo telemetría "ALL SYSTEMS OPERATIONAL" */
+/* Insignias destacadas */
 .hero-badges {
   display: flex;
   flex-wrap: wrap;
@@ -661,15 +648,15 @@ button {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  padding: 0.42rem 0.8rem;
-  border-radius: var(--radius-sm);
+  padding: 0.44rem 0.9rem;
+  border-radius: var(--radius-pill);
   font-family: var(--font-mono);
   font-size: 0.74rem;
-  font-weight: 500;
-  letter-spacing: 0.02em;
-  background: #080C0A;
-  border: 1px solid var(--border-subtle);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.55);
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  background: var(--bg-elevated);
+  border: 1px solid transparent;
+  box-shadow: 0 6px 16px -6px rgba(20, 30, 23, 0.1);
   transition: transform var(--transition-fast), border-color var(--transition-fast);
 }
 
@@ -678,13 +665,13 @@ button {
 }
 
 .badge--finance {
-  border-color: rgba(34, 197, 94, 0.35);
-  color: var(--dollar-green-bright);
+  border-color: var(--border-dollar);
+  color: var(--dollar-green);
 }
 
 .badge--tech {
-  border-color: rgba(216, 211, 190, 0.25);
-  color: var(--warm-sand);
+  border-color: var(--border-gold);
+  color: var(--gold-deep);
 }
 
 .badge__dot {
@@ -695,54 +682,54 @@ button {
 
 .badge__dot--finance {
   background-color: var(--dollar-green);
-  box-shadow: 0 0 8px var(--dollar-green);
+  box-shadow: 0 0 8px rgba(20, 107, 58, 0.45);
 }
 
 .badge__dot--tech {
-  background-color: var(--olive-moss-light);
-  box-shadow: 0 0 8px var(--olive-moss-light);
+  background-color: var(--gold-primary);
+  box-shadow: 0 0 8px rgba(181, 137, 50, 0.45);
 }
 
 .hero-title {
-  font-family: var(--font-display);
-  font-size: clamp(2.1rem, 4.3vw, 3.45rem);
+  font-family: var(--font-serif);
+  font-size: clamp(2.15rem, 4.4vw, 3.55rem);
   font-weight: 700;
-  line-height: 1.09;
-  letter-spacing: -0.038em;
-  color: var(--warm-ivory);
+  line-height: 1.1;
+  letter-spacing: -0.022em;
+  color: var(--text-primary);
   margin-bottom: 1.45rem;
 }
 
 .hero-subtitle {
   font-size: clamp(1rem, 1.3vw, 1.1rem);
   color: var(--text-secondary);
-  line-height: 1.68;
+  line-height: 1.72;
   margin-bottom: 2.15rem;
   max-width: 630px;
 }
 
 .hero-subtitle strong {
-  color: var(--warm-ivory);
-  font-weight: 600;
+  color: var(--text-primary);
+  font-weight: 700;
 }
 
 .hero-cta-group {
   display: flex;
   flex-direction: column;
   gap: 0.85rem;
-  margin-bottom: 2.5rem;
+  margin-bottom: 2.4rem;
 }
 
-/* Tira de métricas estilo barra inferior del Hero de la referencia */
+/* Tira de métricas de confianza en marfil con filetes dorados */
 .hero-trust-strip {
   display: grid;
   grid-template-columns: 1fr;
   gap: 1rem;
-  padding: 1rem 1.25rem;
-  background: #080C0A;
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 1.15rem 1.35rem;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border-gold);
   border-radius: var(--radius-md);
-  box-shadow: 0 16px 36px -12px rgba(0, 0, 0, 0.8);
+  box-shadow: var(--shadow-card);
 }
 
 .trust-divider {
@@ -759,76 +746,68 @@ button {
   font-family: var(--font-mono);
   font-size: 0.98rem;
   font-weight: 600;
-  letter-spacing: -0.01em;
-  color: var(--warm-ivory);
+  color: var(--text-primary);
 }
 
 .trust-metric__value--finance {
-  color: var(--dollar-green-bright);
+  color: var(--dollar-green);
 }
 
 .trust-metric__value--tech {
-  color: var(--warm-sand);
+  color: var(--gold-deep);
 }
 
 .trust-metric__label {
-  font-size: 0.78rem;
+  font-size: 0.79rem;
   color: var(--text-muted);
 }
 
-/* Marco escénico del panel derecho (como las tarjetas sobre fondo verde/oliva de la imagen) */
+/* Marco dorado-bosque del panel ejecutivo derecho (Contraste de Banca Privada) */
 .hero-visual {
   position: relative;
   padding: 1.15rem;
   border-radius: var(--radius-xl);
   background:
-    radial-gradient(circle at 18% 15%, rgba(216, 211, 190, 0.24) 0%, transparent 50%),
-    linear-gradient(140deg, #0E5A2A 0%, #09351A 48%, #5D7023 100%);
-  border: 1px solid rgba(74, 222, 128, 0.24);
-  box-shadow: 0 32px 70px -15px rgba(0, 0, 0, 0.92);
+    radial-gradient(circle at 15% 15%, rgba(212, 175, 55, 0.35) 0%, transparent 52%),
+    linear-gradient(145deg, #D4AF37 0%, #8C6621 38%, #0E4D2A 100%);
+  border: 1px solid rgba(181, 137, 50, 0.55);
+  box-shadow: var(--shadow-prestige);
 }
 
-/* Textura de puntos dentro del marco escénico del Hero */
 .hero-visual::before {
   content: '';
   position: absolute;
   inset: 0;
   border-radius: inherit;
   pointer-events: none;
-  background-image: radial-gradient(rgba(242, 239, 228, 0.18) 1px, transparent 1px);
-  background-size: 10px 10px;
-  mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.65) 0%, transparent 70%);
+  background-image: radial-gradient(rgba(248, 244, 236, 0.22) 1px, transparent 1px);
+  background-size: 12px 12px;
+  mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.55) 0%, transparent 72%);
 }
 
-/* Tarjeta ejecutiva negra tipo terminal Nexus */
+/* Tarjeta ejecutiva en verde reserva oscuro con oro y verde dólar */
 .executive-card {
   position: relative;
   z-index: 1;
-  background: #080B09;
-  border: 1px solid rgba(255, 255, 255, 0.11);
+  background: var(--bg-prestige);
+  border: 1px solid rgba(212, 175, 55, 0.32);
   border-radius: var(--radius-lg);
-  padding: 1.35rem;
-  box-shadow: 0 24px 50px rgba(0, 0, 0, 0.9);
+  padding: 1.4rem;
+  box-shadow: 0 24px 48px rgba(5, 14, 9, 0.72);
   display: flex;
   flex-direction: column;
   gap: 1.05rem;
+  color: var(--text-on-dark);
   overflow: hidden;
 }
 
-/* Barra superior segmentada estilo CONTROL PLANE |||||||||||||| de la imagen */
 .executive-card::after {
   content: '';
-  height: 8px;
+  height: 4px;
   width: 100%;
   border-radius: 2px;
-  background: repeating-linear-gradient(
-    90deg,
-    rgba(34, 197, 94, 0.65) 0px,
-    rgba(34, 197, 94, 0.65) 3px,
-    transparent 3px,
-    transparent 7px
-  );
-  opacity: 0.75;
+  background: linear-gradient(90deg, var(--gold-bright) 0%, var(--dollar-green-vivid) 55%, var(--gold-champagne) 100%);
+  opacity: 0.85;
 }
 
 .executive-card__header {
@@ -836,7 +815,7 @@ button {
   align-items: center;
   justify-content: space-between;
   padding-bottom: 0.8rem;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  border-bottom: 1px solid rgba(230, 211, 163, 0.15);
 }
 
 .executive-card__brand {
@@ -849,41 +828,41 @@ button {
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background: var(--dollar-green);
-  box-shadow: 0 0 10px var(--dollar-green);
+  background: var(--dollar-green-vivid);
+  box-shadow: 0 0 10px var(--dollar-green-vivid);
 }
 
 .executive-card__title {
   font-family: var(--font-mono);
   font-size: 0.72rem;
   letter-spacing: 0.1em;
-  color: var(--text-secondary);
+  color: var(--gold-champagne);
 }
 
 .executive-card__tag {
   font-family: var(--font-mono);
   font-size: 0.68rem;
-  color: var(--dollar-green-bright);
-  background: rgba(34, 197, 94, 0.1);
-  border: 1px solid rgba(34, 197, 94, 0.32);
+  color: var(--gold-bright);
+  background: rgba(212, 175, 55, 0.12);
+  border: 1px solid rgba(212, 175, 55, 0.38);
   padding: 0.16rem 0.55rem;
   border-radius: 4px;
 }
 
 .exec-module {
-  background: #0C110E;
-  border: 1px solid rgba(255, 255, 255, 0.07);
+  background: var(--bg-prestige-card);
+  border: 1px solid rgba(230, 211, 163, 0.14);
   border-radius: var(--radius-md);
   padding: 1.1rem;
   transition: border-color var(--transition-fast);
 }
 
 .exec-module--finance:hover {
-  border-color: var(--border-finance);
+  border-color: rgba(74, 222, 128, 0.45);
 }
 
 .exec-module--tech:hover {
-  border-color: var(--border-tech);
+  border-color: rgba(212, 175, 55, 0.48);
 }
 
 .exec-module__top {
@@ -899,34 +878,33 @@ button {
   font-family: var(--font-mono);
   font-size: 0.66rem;
   letter-spacing: 0.1em;
-  color: var(--dollar-green);
+  color: var(--dollar-green-bright);
   margin-bottom: 0.2rem;
 }
 
 .exec-module__kicker--tech {
-  color: var(--olive-moss-light);
+  color: var(--gold-bright);
 }
 
 .exec-module__heading {
-  font-family: var(--font-display);
-  font-size: 1rem;
+  font-family: var(--font-serif);
+  font-size: 1.08rem;
   font-weight: 700;
-  letter-spacing: -0.02em;
-  color: var(--warm-ivory);
+  color: var(--text-on-dark);
 }
 
 .exec-module__badge-cagr {
   text-align: right;
-  background: #070A08;
-  border: 1px solid rgba(34, 197, 94, 0.35);
-  padding: 0.32rem 0.65rem;
+  background: var(--bg-prestige-deep);
+  border: 1px solid rgba(74, 222, 128, 0.38);
+  padding: 0.34rem 0.65rem;
   border-radius: 5px;
 }
 
 .cagr-number {
   display: block;
   font-family: var(--font-mono);
-  font-size: 1.15rem;
+  font-size: 1.18rem;
   font-weight: 600;
   line-height: 1.1;
   color: var(--dollar-green-bright);
@@ -935,13 +913,13 @@ button {
 .cagr-caption {
   font-family: var(--font-mono);
   font-size: 0.62rem;
-  color: var(--text-muted);
+  color: var(--text-on-dark-muted);
 }
 
 .chart-wrapper {
   margin-bottom: 0.85rem;
-  background: #070A08;
-  border: 1px solid rgba(255, 255, 255, 0.05);
+  background: var(--bg-prestige-deep);
+  border: 1px solid rgba(230, 211, 163, 0.12);
   border-radius: 6px;
   padding: 0.65rem 0.65rem 0.45rem;
 }
@@ -956,7 +934,7 @@ button {
   justify-content: space-between;
   font-family: var(--font-mono);
   font-size: 0.65rem;
-  color: var(--text-muted);
+  color: var(--text-on-dark-muted);
   margin-top: 0.35rem;
 }
 
@@ -971,17 +949,17 @@ button {
   font-size: 0.68rem;
   padding: 0.2rem 0.55rem;
   border-radius: 4px;
-  background: #070A08;
-  color: var(--text-secondary);
-  border: 1px solid rgba(255, 255, 255, 0.07);
+  background: var(--bg-prestige-deep);
+  color: var(--gold-champagne);
+  border: 1px solid rgba(212, 175, 55, 0.24);
 }
 
 .tech-status-badge {
   font-family: var(--font-mono);
   font-size: 0.68rem;
-  color: var(--warm-sand);
-  background: rgba(124, 146, 50, 0.16);
-  border: 1px solid rgba(156, 179, 68, 0.35);
+  color: var(--gold-bright);
+  background: rgba(212, 175, 55, 0.14);
+  border: 1px solid rgba(212, 175, 55, 0.38);
   padding: 0.2rem 0.55rem;
   border-radius: 4px;
 }
@@ -999,17 +977,17 @@ button {
   gap: 0.7rem;
   padding: 0.6rem 0.7rem;
   border-radius: 6px;
-  background: #070A08;
-  border: 1px solid rgba(255, 255, 255, 0.06);
+  background: var(--bg-prestige-deep);
+  border: 1px solid rgba(230, 211, 163, 0.12);
 }
 
 .tech-cap-item__icon {
   width: 32px;
   height: 32px;
   border-radius: 5px;
-  background: rgba(34, 197, 94, 0.12);
-  border: 1px solid rgba(34, 197, 94, 0.25);
-  color: var(--dollar-green-bright);
+  background: rgba(212, 175, 55, 0.14);
+  border: 1px solid rgba(212, 175, 55, 0.32);
+  color: var(--gold-bright);
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -1019,12 +997,12 @@ button {
 .tech-cap-item__title {
   font-size: 0.84rem;
   font-weight: 600;
-  color: var(--warm-ivory);
+  color: var(--text-on-dark);
 }
 
 .tech-cap-item__desc {
   font-size: 0.73rem;
-  color: var(--text-muted);
+  color: var(--text-on-dark-muted);
 }
 
 .exec-module__footer {
@@ -1032,74 +1010,77 @@ button {
   align-items: center;
   justify-content: space-between;
   padding-top: 0.6rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.07);
+  border-top: 1px solid rgba(230, 211, 163, 0.14);
   font-size: 0.74rem;
 }
 
 .code-signature {
   font-family: var(--font-mono);
-  color: var(--text-muted);
+  color: var(--text-on-dark-muted);
 }
 
 .exec-quick-link {
   font-family: var(--font-mono);
-  color: var(--dollar-green-bright);
+  color: var(--gold-bright);
   font-weight: 600;
 }
 
 .exec-quick-link:hover {
+  color: var(--dollar-green-bright);
   text-decoration: underline;
 }
 
 /* --------------------------------------------------------------------------
-   7. LAS DOS PATAS ESTRATÉGICAS (TARJETAS DE CONSOLA CON FONDO VERDE/OLIVA)
+   7. LAS DOS VERTICALES DE LH VALOR (CREMA CHAMPÁN, MARFIL, ORO Y DÓLAR)
    -------------------------------------------------------------------------- */
 .pillars-section {
   position: relative;
-  border-top: 1px solid rgba(255, 255, 255, 0.06);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  border-top: 1px solid rgba(181, 137, 50, 0.24);
+  border-bottom: 1px solid rgba(181, 137, 50, 0.24);
   background:
-    radial-gradient(ellipse 65% 50% at 15% 50%, rgba(14, 90, 42, 0.25) 0%, transparent 70%),
-    radial-gradient(ellipse 65% 50% at 85% 50%, rgba(124, 146, 50, 0.22) 0%, transparent 70%);
+    radial-gradient(ellipse 65% 50% at 15% 50%, rgba(20, 107, 58, 0.06) 0%, transparent 70%),
+    radial-gradient(ellipse 65% 50% at 85% 50%, rgba(181, 137, 50, 0.1) 0%, transparent 70%),
+    var(--bg-secondary);
 }
 
-/* Conmutador de vista estilo pestañas de código de la referencia */
+/* Selector interactivo de verticales */
 .pillar-switcher {
   display: inline-flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 0.35rem;
   margin-top: 1.85rem;
-  padding: 0.3rem;
-  background: #060907;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: var(--radius-md);
+  padding: 0.34rem;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border-gold);
+  border-radius: var(--radius-pill);
+  box-shadow: 0 8px 20px -8px rgba(20, 30, 23, 0.1);
 }
 
 .pillar-tab {
   display: inline-flex;
   align-items: center;
   gap: 0.45rem;
-  padding: 0.48rem 0.95rem;
-  border-radius: 5px;
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius-pill);
   font-family: var(--font-mono);
-  font-size: 0.78rem;
-  font-weight: 500;
-  color: var(--text-muted);
+  font-size: 0.76rem;
+  font-weight: 600;
+  color: var(--text-secondary);
   transition:
     background-color var(--transition-fast),
     color var(--transition-fast),
-    border-color var(--transition-fast);
+    box-shadow var(--transition-fast);
 }
 
 .pillar-tab:hover {
-  color: var(--warm-ivory);
+  color: var(--text-primary);
 }
 
 .pillar-tab.active {
-  background: #131B16;
-  color: var(--warm-ivory);
-  box-shadow: inset 0 0 0 1px rgba(34, 197, 94, 0.32);
+  background: var(--dollar-green-deep);
+  color: var(--bg-elevated);
+  box-shadow: 0 6px 16px -4px rgba(11, 62, 34, 0.35);
 }
 
 .pillar-tab__dot {
@@ -1109,14 +1090,14 @@ button {
 }
 
 .pillar-tab__dot--finance {
-  background: var(--dollar-green);
+  background: var(--dollar-green-vivid);
 }
 
 .pillar-tab__dot--tech {
-  background: var(--olive-moss-light);
+  background: var(--gold-bright);
 }
 
-/* Grid de las dos patas */
+/* Grid de las dos verticales */
 .pillars-grid {
   display: grid;
   grid-template-columns: 1fr;
@@ -1132,8 +1113,8 @@ button {
 
 .pillar-card {
   position: relative;
-  background: #080B09;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: var(--bg-elevated);
+  border: 1px solid var(--border-gold);
   border-radius: var(--radius-lg);
   padding: 2rem;
   display: flex;
@@ -1148,7 +1129,6 @@ button {
     box-shadow var(--transition-base);
 }
 
-/* Borde superior escénico inspirado en los paneles verdes/oliva de la imagen */
 .pillar-card::before {
   content: '';
   position: absolute;
@@ -1159,11 +1139,11 @@ button {
 }
 
 .pillar-card--finance::before {
-  background: linear-gradient(90deg, #0E5A2A, #22C55E, #7C9232);
+  background: linear-gradient(90deg, var(--dollar-green-deep), var(--dollar-green), var(--gold-bright));
 }
 
 .pillar-card--tech::before {
-  background: linear-gradient(90deg, #7C9232, #D8D3BE, #22C55E);
+  background: linear-gradient(90deg, var(--gold-deep), var(--gold-bright), var(--dollar-green));
 }
 
 .pillar-card.is-hidden {
@@ -1179,7 +1159,7 @@ button {
     transform: scale(1);
   }
   35% {
-    transform: scale(1.01);
+    transform: scale(1.012);
   }
   100% {
     transform: scale(1);
@@ -1188,18 +1168,14 @@ button {
 
 .pillar-card--finance:hover {
   transform: translateY(-4px);
-  border-color: rgba(34, 197, 94, 0.45);
-  box-shadow:
-    0 32px 64px -16px rgba(0, 0, 0, 0.95),
-    0 0 36px -8px rgba(14, 90, 42, 0.55);
+  border-color: var(--dollar-green);
+  box-shadow: var(--shadow-card-hover);
 }
 
 .pillar-card--tech:hover {
   transform: translateY(-4px);
-  border-color: rgba(156, 179, 68, 0.45);
-  box-shadow:
-    0 32px 64px -16px rgba(0, 0, 0, 0.95),
-    0 0 36px -8px rgba(124, 146, 50, 0.4);
+  border-color: var(--gold-primary);
+  box-shadow: var(--shadow-card-hover);
 }
 
 .pillar-card__badge-row {
@@ -1215,26 +1191,26 @@ button {
   font-size: 0.7rem;
   font-weight: 600;
   letter-spacing: 0.1em;
-  padding: 0.3rem 0.65rem;
-  border-radius: 4px;
+  padding: 0.34rem 0.75rem;
+  border-radius: var(--radius-pill);
 }
 
 .pillar-tag--finance {
-  background: rgba(14, 90, 42, 0.35);
-  color: var(--dollar-green-bright);
-  border: 1px solid rgba(34, 197, 94, 0.32);
+  background: var(--dollar-surface);
+  color: var(--dollar-green);
+  border: 1px solid var(--border-dollar);
 }
 
 .pillar-tag--tech {
-  background: rgba(124, 146, 50, 0.22);
-  color: var(--warm-sand);
-  border: 1px solid rgba(156, 179, 68, 0.35);
+  background: var(--gold-surface);
+  color: var(--gold-deep);
+  border: 1px solid var(--border-gold);
 }
 
 .pillar-icon {
-  width: 42px;
-  height: 42px;
-  border-radius: var(--radius-sm);
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-md);
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -1242,43 +1218,43 @@ button {
 }
 
 .pillar-icon--finance {
-  background: #0D1611;
-  color: var(--dollar-green-bright);
-  border: 1px solid rgba(34, 197, 94, 0.32);
+  background: var(--dollar-surface);
+  color: var(--dollar-green);
+  border: 1px solid var(--border-dollar);
 }
 
 .pillar-icon--tech {
-  background: #121710;
-  color: var(--olive-moss-light);
-  border: 1px solid rgba(156, 179, 68, 0.32);
+  background: var(--gold-surface);
+  color: var(--gold-deep);
+  border: 1px solid var(--border-gold);
 }
 
 .pillar-card__title {
-  font-family: var(--font-display);
-  font-size: clamp(1.45rem, 2.3vw, 1.8rem);
+  font-family: var(--font-serif);
+  font-size: clamp(1.5rem, 2.4vw, 1.9rem);
   font-weight: 700;
   line-height: 1.18;
-  letter-spacing: -0.03em;
-  color: var(--warm-ivory);
+  letter-spacing: -0.015em;
+  color: var(--text-primary);
   margin-bottom: 0.75rem;
 }
 
 .pillar-card__lead {
   color: var(--text-secondary);
   font-size: 0.96rem;
-  line-height: 1.65;
+  line-height: 1.68;
 }
 
 .pillar-card__lead strong {
-  color: var(--warm-ivory);
+  color: var(--text-primary);
 }
 
-/* Bloque destacado 11% CAGR estilo panel de telemetría de la imagen */
+/* Bloque destacado 11% CAGR y simulador */
 .cagr-highlight-box {
-  background: #0C120E;
-  border: 1px solid rgba(34, 197, 94, 0.26);
+  background: var(--bg-surface);
+  border: 1px solid var(--border-dollar);
   border-radius: var(--radius-md);
-  padding: 1.25rem;
+  padding: 1.3rem;
 }
 
 .cagr-highlight-box__main {
@@ -1286,41 +1262,41 @@ button {
   flex-direction: column;
   gap: 0.85rem;
   padding-bottom: 1.1rem;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+  border-bottom: 1px solid rgba(181, 137, 50, 0.22);
 }
 
 .cagr-highlight-box__value-group {
   display: inline-flex;
   align-items: baseline;
-  gap: 0.4rem;
+  gap: 0.38rem;
 }
 
 .cagr-highlight-box__number {
   font-family: var(--font-mono);
-  font-size: 2.55rem;
-  font-weight: 600;
+  font-size: 2.6rem;
+  font-weight: 700;
   line-height: 1;
   letter-spacing: -0.04em;
-  color: var(--dollar-green-bright);
+  color: var(--dollar-green);
 }
 
 .cagr-highlight-box__unit {
   font-family: var(--font-mono);
   font-size: 0.84rem;
   font-weight: 600;
-  color: var(--olive-moss-light);
+  color: var(--gold-deep);
 }
 
 .cagr-highlight-box__title {
   display: block;
   font-size: 0.95rem;
-  color: var(--warm-ivory);
+  color: var(--text-primary);
   margin-bottom: 0.25rem;
 }
 
 .cagr-highlight-box__sub {
   font-size: 0.83rem;
-  color: var(--text-muted);
+  color: var(--text-secondary);
 }
 
 /* Simulador interactivo de interés compuesto */
@@ -1351,19 +1327,24 @@ button {
 .horizon-btn {
   font-family: var(--font-mono);
   font-size: 0.72rem;
-  padding: 0.26rem 0.62rem;
-  border-radius: 4px;
-  background: #070A08;
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  color: var(--text-muted);
+  font-weight: 600;
+  padding: 0.28rem 0.65rem;
+  border-radius: 5px;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border-subtle);
+  color: var(--text-secondary);
   transition: all var(--transition-fast);
 }
 
-.horizon-btn:hover,
-.horizon-btn.active {
-  background: rgba(34, 197, 94, 0.16);
+.horizon-btn:hover {
   border-color: var(--dollar-green);
-  color: var(--dollar-green-bright);
+  color: var(--dollar-green);
+}
+
+.horizon-btn.active {
+  background: var(--dollar-green);
+  border-color: var(--dollar-green);
+  color: var(--bg-elevated);
 }
 
 .compound-simulator__result {
@@ -1372,9 +1353,9 @@ button {
   align-items: center;
   justify-content: space-between;
   gap: 0.75rem;
-  background: #070A08;
-  border: 1px solid rgba(255, 255, 255, 0.06);
-  padding: 0.8rem 1rem;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border-gold);
+  padding: 0.85rem 1.05rem;
   border-radius: var(--radius-sm);
 }
 
@@ -1391,33 +1372,34 @@ button {
 
 .compound-stat__val {
   font-family: var(--font-mono);
-  font-size: 0.95rem;
-  font-weight: 600;
-  color: var(--warm-ivory);
+  font-size: 0.96rem;
+  font-weight: 700;
+  color: var(--text-primary);
 }
 
 .compound-stat__val--accent {
-  color: var(--dollar-green-bright);
+  color: var(--dollar-green);
 }
 
 .compound-stat__badge {
   font-family: var(--font-mono);
-  font-size: 0.85rem;
-  font-weight: 600;
-  color: var(--olive-moss-light);
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--gold-deep);
 }
 
 .compound-arrow {
-  color: var(--dollar-green);
+  color: var(--gold-primary);
   font-family: var(--font-mono);
+  font-weight: 700;
 }
 
-/* Bloque destacado Tecnológico en Pata 2 */
+/* Bloque destacado Tecnológico en Vertical 2 */
 .tech-highlight-box {
-  background: #0C120E;
-  border: 1px solid rgba(156, 179, 68, 0.28);
+  background: var(--bg-surface);
+  border: 1px solid var(--border-gold);
   border-radius: var(--radius-md);
-  padding: 1.25rem;
+  padding: 1.3rem;
 }
 
 .tech-metrics-row {
@@ -1425,7 +1407,7 @@ button {
   grid-template-columns: 1fr;
   gap: 0.75rem;
   padding-bottom: 1rem;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+  border-bottom: 1px solid rgba(181, 137, 50, 0.22);
 }
 
 .tech-metric-item {
@@ -1436,13 +1418,13 @@ button {
 .tech-metric-item__val {
   font-family: var(--font-mono);
   font-size: 0.94rem;
-  font-weight: 600;
-  color: var(--warm-sand);
+  font-weight: 700;
+  color: var(--gold-deep);
 }
 
 .tech-metric-item__lbl {
   font-size: 0.76rem;
-  color: var(--text-muted);
+  color: var(--text-secondary);
 }
 
 .service-preview-tabs {
@@ -1459,39 +1441,43 @@ button {
 .srv-tab {
   font-family: var(--font-mono);
   font-size: 0.72rem;
-  font-weight: 500;
-  padding: 0.32rem 0.68rem;
-  border-radius: 4px;
-  background: #070A08;
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  color: var(--text-muted);
+  font-weight: 600;
+  padding: 0.34rem 0.7rem;
+  border-radius: 5px;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border-subtle);
+  color: var(--text-secondary);
   transition: all var(--transition-fast);
 }
 
-.srv-tab:hover,
+.srv-tab:hover {
+  border-color: var(--gold-primary);
+  color: var(--gold-deep);
+}
+
 .srv-tab.active {
-  background: rgba(124, 146, 50, 0.2);
-  border-color: var(--olive-moss-light);
-  color: var(--warm-ivory);
+  background: var(--gold-primary);
+  border-color: var(--gold-primary);
+  color: var(--bg-elevated);
 }
 
 .service-preview-tabs__body {
-  background: #070A08;
-  border: 1px solid rgba(255, 255, 255, 0.06);
-  padding: 0.8rem 1rem;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border-gold);
+  padding: 0.85rem 1.05rem;
   border-radius: var(--radius-sm);
 }
 
 .service-preview-text {
-  font-size: 0.84rem;
+  font-size: 0.85rem;
   color: var(--text-secondary);
 }
 
 .service-preview-text strong {
-  color: var(--warm-ivory);
+  color: var(--text-primary);
 }
 
-/* Lista de características con divisores técnicos limpios */
+/* Lista de características con divisores sutiles */
 .pillar-features {
   display: flex;
   flex-direction: column;
@@ -1501,10 +1487,10 @@ button {
   display: flex;
   align-items: flex-start;
   gap: 0.85rem;
-  font-size: 0.91rem;
+  font-size: 0.92rem;
   color: var(--text-secondary);
   padding-block: 0.85rem;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  border-bottom: 1px solid rgba(181, 137, 50, 0.16);
 }
 
 .pillar-features__item:first-child {
@@ -1518,32 +1504,32 @@ button {
 
 .pillar-features__item strong {
   display: block;
-  color: var(--warm-ivory);
+  color: var(--text-primary);
   font-weight: 600;
   margin-bottom: 0.18rem;
 }
 
 .pillar-features__check {
-  width: 22px;
-  height: 22px;
-  border-radius: 4px;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
-  margin-top: 0.15rem;
+  margin-top: 0.12rem;
 }
 
 .pillar-features__check--finance {
-  background: rgba(34, 197, 94, 0.14);
-  border: 1px solid rgba(34, 197, 94, 0.32);
-  color: var(--dollar-green-bright);
+  background: var(--dollar-surface);
+  border: 1px solid var(--border-dollar);
+  color: var(--dollar-green);
 }
 
 .pillar-features__check--tech {
-  background: rgba(124, 146, 50, 0.18);
-  border: 1px solid rgba(156, 179, 68, 0.35);
-  color: var(--olive-moss-light);
+  background: var(--gold-surface);
+  border: 1px solid var(--border-gold);
+  color: var(--gold-deep);
 }
 
 .pillar-card__footer {
@@ -1551,124 +1537,136 @@ button {
 }
 
 /* --------------------------------------------------------------------------
-   8. FILOSOFÍA Y CREACIÓN DE VALOR (BLOQUES MODULARES CONSOLA)
+   8. FILOSOFÍA Y CREACIÓN DE VALOR
    -------------------------------------------------------------------------- */
 .philosophy-grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 1.5rem;
+  gap: 1.6rem;
   margin-bottom: 2.75rem;
 }
 
 .philosophy-card {
   position: relative;
-  background: #080B09;
-  border: 1px solid rgba(255, 255, 255, 0.09);
+  background: var(--bg-elevated);
+  border: 1px solid var(--border-gold);
   border-radius: var(--radius-lg);
-  padding: 1.85rem;
+  padding: 1.95rem;
   display: flex;
   flex-direction: column;
   gap: 1rem;
   box-shadow: var(--shadow-card);
-  transition: transform var(--transition-base), border-color var(--transition-base);
+  transition: transform var(--transition-base), border-color var(--transition-base), box-shadow var(--transition-base);
 }
 
 .philosophy-card:hover {
   transform: translateY(-4px);
-  border-color: rgba(34, 197, 94, 0.38);
+  border-color: var(--dollar-green);
+  box-shadow: var(--shadow-card-hover);
 }
 
 .philosophy-card__number {
   position: absolute;
   top: 1.4rem;
   right: 1.5rem;
-  font-family: var(--font-mono);
-  font-size: 1.2rem;
-  font-weight: 600;
-  color: rgba(74, 222, 128, 0.25);
+  font-family: var(--font-serif);
+  font-size: 1.55rem;
+  font-weight: 700;
+  color: rgba(181, 137, 50, 0.28);
 }
 
 .philosophy-card__icon {
-  width: 44px;
-  height: 44px;
-  border-radius: var(--radius-sm);
+  width: 46px;
+  height: 46px;
+  border-radius: var(--radius-md);
   display: inline-flex;
   align-items: center;
   justify-content: center;
 }
 
 .philosophy-card__icon--amber {
-  background: rgba(124, 146, 50, 0.16);
-  color: var(--olive-moss-light);
-  border: 1px solid rgba(156, 179, 68, 0.32);
+  background: var(--gold-surface);
+  color: var(--gold-deep);
+  border: 1px solid var(--border-gold);
 }
 
 .philosophy-card__icon--emerald {
-  background: rgba(22, 163, 74, 0.16);
-  color: var(--dollar-green-bright);
-  border: 1px solid rgba(34, 197, 94, 0.32);
+  background: var(--dollar-surface);
+  color: var(--dollar-green);
+  border: 1px solid var(--border-dollar);
 }
 
 .philosophy-card__icon--cyan {
-  background: rgba(216, 211, 190, 0.1);
-  color: var(--warm-sand);
-  border: 1px solid rgba(216, 211, 190, 0.25);
+  background: linear-gradient(135deg, var(--gold-surface), var(--dollar-surface));
+  color: var(--dollar-green-deep);
+  border: 1px solid var(--border-gold);
 }
 
 .philosophy-card__title {
-  font-family: var(--font-display);
-  font-size: 1.22rem;
+  font-family: var(--font-serif);
+  font-size: 1.32rem;
   font-weight: 700;
-  letter-spacing: -0.02em;
-  color: var(--warm-ivory);
+  color: var(--text-primary);
 }
 
 .philosophy-card__text {
-  font-size: 0.93rem;
+  font-size: 0.94rem;
   color: var(--text-secondary);
-  line-height: 1.65;
+  line-height: 1.68;
   flex-grow: 1;
 }
 
 .philosophy-card__tag {
   font-family: var(--font-mono);
   font-size: 0.72rem;
+  font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.06em;
   color: var(--dollar-green);
   padding-top: 0.85rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.07);
+  border-top: 1px solid rgba(181, 137, 50, 0.2);
 }
 
-/* Banner de síntesis con degradado verde bosque / oliva de la imagen */
+/* Banner de síntesis de estatus: Verde bosque profundo + Oro + Crema */
 .philosophy-banner {
   position: relative;
   background:
-    radial-gradient(circle at 90% 20%, rgba(216, 211, 190, 0.18) 0%, transparent 55%),
-    linear-gradient(135deg, #0B3D1D 0%, #08120C 55%, #3B4918 100%);
-  border: 1px solid rgba(74, 222, 128, 0.3);
+    radial-gradient(circle at 88% 20%, rgba(212, 175, 55, 0.25) 0%, transparent 55%),
+    linear-gradient(135deg, #0B1D13 0%, #113922 65%, #1A4E30 100%);
+  border: 1px solid rgba(212, 175, 55, 0.45);
   border-radius: var(--radius-lg);
-  padding: 2.15rem 1.85rem;
+  padding: 2.25rem 1.95rem;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: space-between;
   gap: 1.5rem;
-  box-shadow: var(--shadow-card);
+  box-shadow: var(--shadow-prestige);
 }
 
 .philosophy-banner__title {
-  font-family: var(--font-display);
-  font-size: clamp(1.25rem, 2.2vw, 1.55rem);
+  font-family: var(--font-serif);
+  font-size: clamp(1.3rem, 2.3vw, 1.7rem);
   font-weight: 700;
-  letter-spacing: -0.025em;
-  color: var(--warm-ivory);
-  margin-bottom: 0.4rem;
+  color: var(--text-on-dark);
+  margin-bottom: 0.45rem;
 }
 
 .philosophy-banner__text {
-  color: var(--text-secondary);
-  font-size: 0.95rem;
+  color: var(--text-on-dark-muted);
+  font-size: 0.96rem;
+}
+
+.philosophy-banner .btn--primary {
+  background: linear-gradient(135deg, #E2C16B 0%, var(--gold-bright) 100%);
+  color: #0B1912;
+  border-color: #F2DB96;
+  box-shadow: 0 12px 26px -6px rgba(0, 0, 0, 0.45);
+}
+
+.philosophy-banner .btn--primary:hover {
+  background: linear-gradient(135deg, #F2DB96 0%, #DFBC53 100%);
+  color: #07110C;
 }
 
 /* --------------------------------------------------------------------------
@@ -1676,7 +1674,9 @@ button {
    -------------------------------------------------------------------------- */
 .contact-section {
   background:
-    radial-gradient(ellipse 70% 55% at 50% 100%, rgba(14, 90, 42, 0.25), transparent 70%);
+    radial-gradient(ellipse 70% 55% at 50% 100%, rgba(181, 137, 50, 0.14), transparent 72%),
+    var(--bg-secondary);
+  border-top: 1px solid rgba(181, 137, 50, 0.22);
 }
 
 .contact-layout {
@@ -1697,13 +1697,13 @@ button {
 }
 
 .contact-info__desc strong {
-  color: var(--warm-ivory);
+  color: var(--text-primary);
 }
 
 .contact-highlights {
   display: flex;
   flex-direction: column;
-  gap: 1.1rem;
+  gap: 1.15rem;
   margin-bottom: 2.15rem;
 }
 
@@ -1714,44 +1714,46 @@ button {
 }
 
 .contact-highlight-item__icon {
-  width: 36px;
-  height: 36px;
+  width: 38px;
+  height: 38px;
   border-radius: var(--radius-sm);
-  background: #080C0A;
-  border: 1px solid rgba(34, 197, 94, 0.28);
-  color: var(--dollar-green-bright);
+  background: var(--bg-elevated);
+  border: 1px solid var(--border-gold);
+  color: var(--dollar-green);
   display: inline-flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
+  box-shadow: 0 4px 12px rgba(181, 137, 50, 0.1);
 }
 
 .contact-highlight-item strong {
   display: block;
-  font-size: 0.94rem;
-  color: var(--warm-ivory);
+  font-size: 0.95rem;
+  color: var(--text-primary);
 }
 
 .contact-highlight-item p {
-  font-size: 0.85rem;
-  color: var(--text-muted);
+  font-size: 0.86rem;
+  color: var(--text-secondary);
 }
 
 /* Canales directos alternativos */
 .direct-channels {
-  background: #080B09;
-  border: 1px solid rgba(255, 255, 255, 0.09);
+  background: var(--bg-elevated);
+  border: 1px solid var(--border-gold);
   border-radius: var(--radius-lg);
-  padding: 1.35rem;
+  padding: 1.4rem;
   box-shadow: var(--shadow-card);
 }
 
 .direct-channels__title {
   font-family: var(--font-mono);
   font-size: 0.72rem;
+  font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.1em;
-  color: var(--dollar-green);
+  color: var(--gold-deep);
   margin-bottom: 1rem;
 }
 
@@ -1767,13 +1769,13 @@ button {
   gap: 0.85rem;
   padding: 0.85rem 1rem;
   border-radius: var(--radius-md);
-  background: #0C110E;
-  border: 1px solid rgba(255, 255, 255, 0.07);
+  background: var(--bg-surface);
+  border: 1px solid rgba(181, 137, 50, 0.2);
   transition: border-color var(--transition-fast), transform var(--transition-fast);
 }
 
 .channel-card--interactive:hover {
-  border-color: rgba(34, 197, 94, 0.4);
+  border-color: var(--dollar-green);
   transform: translateY(-2px);
 }
 
@@ -1788,15 +1790,15 @@ button {
 }
 
 .channel-card__icon--mail {
-  background: rgba(22, 163, 74, 0.15);
-  border: 1px solid rgba(34, 197, 94, 0.3);
-  color: var(--dollar-green-bright);
+  background: var(--dollar-surface);
+  border: 1px solid var(--border-dollar);
+  color: var(--dollar-green);
 }
 
 .channel-card__icon--x {
-  background: #060807;
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  color: var(--warm-ivory);
+  background: #0B1912;
+  border: 1px solid rgba(212, 175, 55, 0.4);
+  color: var(--bg-elevated);
 }
 
 .channel-card__body {
@@ -1815,7 +1817,7 @@ button {
   font-family: var(--font-mono);
   font-size: 0.84rem;
   font-weight: 600;
-  color: var(--warm-ivory);
+  color: var(--text-primary);
   overflow: hidden;
   text-overflow: ellipsis;
 }
@@ -1824,22 +1826,22 @@ button {
   display: inline-flex;
   align-items: center;
   gap: 0.35rem;
-  padding: 0.4rem 0.7rem;
+  padding: 0.42rem 0.75rem;
   border-radius: 5px;
-  background: #070A08;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: var(--bg-elevated);
+  border: 1px solid var(--border-gold);
   font-family: var(--font-mono);
   font-size: 0.73rem;
   font-weight: 600;
-  color: var(--text-secondary);
+  color: var(--text-primary);
   transition: all var(--transition-fast);
   flex-shrink: 0;
 }
 
 .copy-email-btn:hover {
-  background: rgba(34, 197, 94, 0.16);
+  background: var(--dollar-green);
   border-color: var(--dollar-green);
-  color: var(--dollar-green-bright);
+  color: var(--bg-elevated);
 }
 
 .channel-card__external {
@@ -1849,16 +1851,16 @@ button {
   font-family: var(--font-mono);
   font-size: 0.74rem;
   font-weight: 600;
-  color: var(--dollar-green-bright);
+  color: var(--dollar-green);
   flex-shrink: 0;
 }
 
-/* Tarjeta del Formulario con marco escénico sutil */
+/* Tarjeta del Formulario en Marfil con filete dorado */
 .form-card {
-  background: #080B09;
-  border: 1px solid rgba(255, 255, 255, 0.11);
+  background: var(--bg-elevated);
+  border: 1px solid var(--border-gold);
   border-radius: var(--radius-lg);
-  padding: 1.85rem;
+  padding: 1.9rem;
   box-shadow: var(--shadow-card);
   position: relative;
 }
@@ -1866,25 +1868,24 @@ button {
 .form-card__header {
   margin-bottom: 1.35rem;
   padding-bottom: 1rem;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+  border-bottom: 1px solid rgba(181, 137, 50, 0.2);
 }
 
 .form-card__title {
-  font-family: var(--font-display);
-  font-size: 1.35rem;
+  font-family: var(--font-serif);
+  font-size: 1.48rem;
   font-weight: 700;
-  letter-spacing: -0.025em;
-  color: var(--warm-ivory);
+  color: var(--text-primary);
   margin-bottom: 0.25rem;
 }
 
 .form-card__subtitle {
-  font-size: 0.83rem;
+  font-size: 0.84rem;
   color: var(--text-muted);
 }
 
 .required-mark {
-  color: var(--dollar-green-bright);
+  color: var(--dollar-green);
   font-weight: 700;
 }
 
@@ -1900,15 +1901,15 @@ button {
   display: flex;
   align-items: center;
   gap: 0.6rem;
-  padding: 0.65rem 0.95rem;
+  padding: 0.68rem 0.95rem;
   margin-bottom: 1.25rem;
   border-radius: var(--radius-sm);
-  background: rgba(22, 163, 74, 0.12);
-  border: 1px solid rgba(34, 197, 94, 0.38);
-  color: var(--dollar-green-bright);
+  background: var(--dollar-surface);
+  border: 1px solid var(--border-dollar);
+  color: var(--dollar-green);
   font-family: var(--font-mono);
   font-size: 0.8rem;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .preselect-banner[hidden] {
@@ -1920,7 +1921,6 @@ button {
   height: 8px;
   border-radius: 50%;
   background: var(--dollar-green);
-  box-shadow: 0 0 8px var(--dollar-green);
   flex-shrink: 0;
 }
 
@@ -1954,7 +1954,7 @@ button {
 
 .form-label {
   font-family: var(--font-mono);
-  font-size: 0.78rem;
+  font-size: 0.76rem;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.05em;
@@ -1969,27 +1969,28 @@ button {
 
 .form-control {
   width: 100%;
-  background: #0C110E;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: var(--bg-primary);
+  border: 1px solid rgba(20, 30, 23, 0.16);
   border-radius: var(--radius-sm);
-  padding: 0.78rem 0.95rem;
-  color: var(--warm-ivory);
+  padding: 0.8rem 0.95rem;
+  color: var(--text-primary);
   font-size: 0.94rem;
-  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast), background-color var(--transition-fast);
 }
 
 .form-control::placeholder {
-  color: rgba(120, 134, 124, 0.65);
+  color: rgba(102, 115, 107, 0.65);
 }
 
 .form-control:hover {
-  border-color: rgba(255, 255, 255, 0.2);
+  border-color: var(--gold-primary);
 }
 
 .form-control:focus {
   outline: none;
+  background: var(--bg-elevated);
   border-color: var(--dollar-green);
-  box-shadow: 0 0 0 3px rgba(34, 197, 94, 0.16);
+  box-shadow: 0 0 0 3px rgba(20, 107, 58, 0.14);
 }
 
 /* Estados de validación en tiempo real */
@@ -1999,7 +2000,7 @@ button {
 }
 
 .form-group.is-valid .form-control {
-  border-color: rgba(34, 197, 94, 0.55);
+  border-color: var(--dollar-green);
 }
 
 .field-error {
@@ -2018,27 +2019,27 @@ button {
 }
 
 .interest-pill {
-  padding: 0.55rem 0.75rem;
+  padding: 0.56rem 0.75rem;
   border-radius: 5px;
-  background: #0C110E;
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: var(--bg-primary);
+  border: 1px solid rgba(20, 30, 23, 0.14);
   font-family: var(--font-mono);
   font-size: 0.75rem;
-  font-weight: 500;
-  color: var(--text-muted);
+  font-weight: 600;
+  color: var(--text-secondary);
   text-align: center;
   transition: all var(--transition-fast);
 }
 
 .interest-pill:hover {
-  border-color: rgba(255, 255, 255, 0.18);
-  color: var(--warm-ivory);
+  border-color: var(--gold-primary);
+  color: var(--text-primary);
 }
 
 .interest-pill.active {
-  background: rgba(22, 163, 74, 0.18);
+  background: var(--dollar-green);
   border-color: var(--dollar-green);
-  color: var(--dollar-green-bright);
+  color: var(--bg-elevated);
 }
 
 .select-wrapper {
@@ -2053,8 +2054,8 @@ button {
 }
 
 .form-select option {
-  background-color: #0B100D;
-  color: var(--warm-ivory);
+  background-color: var(--bg-elevated);
+  color: var(--text-primary);
 }
 
 .select-chevron {
@@ -2076,7 +2077,7 @@ button {
 }
 
 .form-footnote {
-  font-size: 0.76rem;
+  font-size: 0.77rem;
   color: var(--text-muted);
   text-align: center;
 }
@@ -2096,34 +2097,34 @@ button {
 }
 
 .form-success__icon {
-  width: 60px;
-  height: 60px;
+  width: 62px;
+  height: 62px;
   border-radius: 50%;
   background: var(--state-success-bg);
-  border: 1px solid rgba(34, 197, 94, 0.45);
-  color: var(--dollar-green-bright);
+  border: 1px solid var(--border-dollar);
+  color: var(--dollar-green);
   display: inline-flex;
   align-items: center;
   justify-content: center;
 }
 
 .form-success__title {
-  font-family: var(--font-display);
-  font-size: 1.38rem;
+  font-family: var(--font-serif);
+  font-size: 1.48rem;
   font-weight: 700;
-  color: var(--warm-ivory);
+  color: var(--text-primary);
 }
 
 .form-success__desc {
-  font-size: 0.92rem;
+  font-size: 0.93rem;
   color: var(--text-secondary);
   max-width: 460px;
 }
 
 .form-success__summary {
   width: 100%;
-  background: #0C110E;
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: var(--bg-surface);
+  border: 1px solid var(--border-gold);
   border-radius: var(--radius-sm);
   padding: 0.95rem 1.1rem;
   text-align: left;
@@ -2145,7 +2146,7 @@ button {
 }
 
 .summary-line__val {
-  color: var(--dollar-green-bright);
+  color: var(--dollar-green);
   font-family: var(--font-mono);
 }
 
@@ -2160,7 +2161,7 @@ button {
   font-family: var(--font-mono);
   font-size: 0.82rem;
   font-weight: 600;
-  color: var(--dollar-green-bright);
+  color: var(--dollar-green);
   margin-top: 0.35rem;
 }
 
@@ -2169,13 +2170,14 @@ button {
 }
 
 /* --------------------------------------------------------------------------
-   10. FOOTER CORPORATIVO
+   10. FOOTER CORPORATIVO (CIERRE DE PRESTIGIO VERDE BOSQUE & ORO)
    -------------------------------------------------------------------------- */
 .site-footer {
-  background: #050706;
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  background: var(--bg-prestige);
+  border-top: 2px solid rgba(212, 175, 55, 0.42);
   padding-top: 4.25rem;
   padding-bottom: 2.5rem;
+  color: var(--text-on-dark);
 }
 
 .footer-grid {
@@ -2183,27 +2185,27 @@ button {
   grid-template-columns: 1fr;
   gap: 2.25rem;
   padding-bottom: 2.75rem;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+  border-bottom: 1px solid rgba(230, 211, 163, 0.16);
 }
 
 .footer-summary {
-  margin-top: 1rem;
+  margin-top: 1.1rem;
   font-size: 0.88rem;
-  color: var(--text-muted);
+  color: var(--text-on-dark-muted);
   max-width: 420px;
 }
 
 .footer-summary strong {
-  color: var(--text-secondary);
+  color: var(--gold-champagne);
 }
 
 .footer-col-title {
   font-family: var(--font-mono);
-  font-size: 0.78rem;
+  font-size: 0.76rem;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.1em;
-  color: var(--warm-ivory);
+  color: var(--gold-bright);
   margin-bottom: 1rem;
 }
 
@@ -2215,12 +2217,12 @@ button {
 }
 
 .footer-link {
-  font-size: 0.86rem;
-  color: var(--text-muted);
+  font-size: 0.87rem;
+  color: var(--text-on-dark-muted);
 }
 
 .footer-link:hover {
-  color: var(--dollar-green-bright);
+  color: var(--gold-bright);
 }
 
 .footer-contact-item {
@@ -2229,7 +2231,7 @@ button {
   gap: 0.55rem;
   font-family: var(--font-mono);
   font-size: 0.82rem;
-  color: var(--text-secondary);
+  color: var(--text-on-dark);
 }
 
 .footer-contact-item:hover {
@@ -2245,22 +2247,17 @@ button {
 
 .legal-disclaimer {
   font-size: 0.75rem;
-  line-height: 1.65;
-  color: var(--text-muted);
+  line-height: 1.68;
+  color: var(--text-on-dark-muted);
+  opacity: 0.85;
 }
 
 .footer-copyright-row {
   display: flex;
   flex-direction: column;
   gap: 0.4rem;
-  font-size: 0.8rem;
-  color: var(--text-muted);
-}
-
-.footer-edge-note {
-  font-family: var(--font-mono);
-  font-size: 0.72rem;
-  color: var(--dollar-green);
+  font-size: 0.82rem;
+  color: var(--gold-champagne);
 }
 
 /* --------------------------------------------------------------------------
@@ -2290,8 +2287,8 @@ button {
   .trust-divider {
     display: block;
     width: 1px;
-    height: 34px;
-    background: rgba(255, 255, 255, 0.08);
+    height: 36px;
+    background: rgba(181, 137, 50, 0.28);
   }
 
   .tech-capabilities-grid {
@@ -2340,7 +2337,7 @@ button {
   .philosophy-banner {
     flex-direction: row;
     align-items: center;
-    padding: 2.35rem 2.65rem;
+    padding: 2.4rem 2.7rem;
   }
 
   .footer-grid {

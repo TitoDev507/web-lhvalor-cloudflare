@@ -15,7 +15,7 @@
   const CONFIG = {
     recipientEmail: 'hectorparedesreche@gmail.com',
     cagrRate: 0.11,
-    baseCapital: 100000,
+    baseCapital: 10000,
     validInterests: [
       'Inversión en Renta Variable',
       'Servicios Digitales / Web',
@@ -214,10 +214,9 @@
     const simFinalValue = document.getElementById('sim-final-value');
     const simMultiplier = document.getElementById('sim-multiplier');
 
-    const currencyFormatter = new Intl.NumberFormat('es-ES', {
-      style: 'currency',
-      currency: 'EUR',
-      maximumFractionDigits: 0,
+    const currencyFormatter = new Intl.NumberFormat('en-US', {
+      minimumFractionDigits: 2,
+      maximumFractionDigits: 2,
     });
 
     const numberFormatter = new Intl.NumberFormat('es-ES', {
@@ -235,7 +234,7 @@
         simHorizonLabel.textContent = `Valor estimado (${numericYears} años)`;
       }
       if (simFinalValue) {
-        simFinalValue.textContent = currencyFormatter.format(finalAmount);
+        simFinalValue.textContent = `${currencyFormatter.format(finalAmount)}$`;
       }
       if (simMultiplier) {
         simMultiplier.textContent = `${numberFormatter.format(multiplier)}x`;
